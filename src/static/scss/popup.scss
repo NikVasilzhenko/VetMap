@@ -1,0 +1,46 @@
+.popup{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  animation: popapFadeIn .2s both;
+  &__overlay{
+    display: block;
+    background-color: $clr-overlay-bg;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &::after{
+      content: 'close';
+      @include material-icons;
+      width: 2.4rem;
+      height: 2.4rem;
+      position: absolute;
+      top: .8rem;
+      right: .8rem;
+      color: $clr-white;
+    }
+  }
+  &__main{
+    position: absolute;
+    z-index: 2;
+    top: 3.2rem;
+    bottom: 3.2rem;
+    left: 3.2rem;
+    right: 3.2rem;
+    background-color: $clr-popup-bg;
+    border: 1px solid $clr-popup-brd;
+    box-shadow: $shd-popup;
+    border-radius: .4rem;
+    overflow-y: auto;
+  }
+}
+@keyframes popapFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

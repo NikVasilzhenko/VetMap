@@ -1,0 +1,12 @@
+.btn-main{
+  @include btn-reset;
+  @include h2;
+  text-align: center;
+  width: 100%;
+  margin: 16px 0;
+  height: 4.8rem;
+  line-height: 4.8rem;
+  border-radius: 2.4rem;
+  background-color: $clr-main-btn-bg;
+  color: $clr-main-btn-txt;
+}

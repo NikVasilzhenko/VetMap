@@ -1,0 +1,9 @@
+.error-txt{
+  @include txt-s;
+  color: $clr-error;
+  position: absolute;
+  top: 6rem;
+  right: 0;
+  width: 100%;
+  text-align: center;  
+}

@@ -1,0 +1,13 @@
+.links-group{
+  text-align: center;
+  margin-bottom: 1.6rem;
+  li{
+    margin-bottom: 1rem;
+    &:last-child{margin-bottom: 0;}
+  }
+}
+.link{
+  @include txt-xs;
+  color: $clr-link;
+  text-decoration: underline;
+}

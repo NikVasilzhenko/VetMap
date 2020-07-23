@@ -1,0 +1,25 @@
+//библиотеки и плагины
+@import "vendors.scss";
+
+//переменный и миксины
+//@import "_vars_dark.scss";
+@import "_vars_light.scss";
+@import "_mix.scss";
+
+//базовые глобальные стили
+@import "basic.scss";
+@import "layout.scss";
+
+//модули
+@import "sign.scss";
+@import "main-title.scss";
+@import "btn-main.scss";
+@import "txt.scss";
+@import "links-group.scss";
+@import "country-select.scss";
+@import "error-txt.scss";
+@import "popup.scss";
+@import "politic.scss";
+@import "code-groupe.scss";
+@import "timer.scss";
+@import "big-check.scss";

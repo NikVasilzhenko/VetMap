@@ -1,0 +1,29 @@
+<div class="layout sign">
+  <main class="main sign__main">
+   
+    <h1 class="main-title">Вход</h1>
+    
+    <p class="txt txt_center">Введите код из СМС<br>Код отправлен на номер +7 (988) 888 88 88</p>
+    
+    <div class="code-groupe">
+      
+      <div class="code-groupe__inputs">
+        <input class="code-groupe__input" type="text" maxlength="1" oninput="focusInNextCodeCell(this);">
+        <input class="code-groupe__input" type="text" maxlength="1" oninput="focusInNextCodeCell(this);">
+        <input class="code-groupe__input" type="text" maxlength="1" oninput="focusInNextCodeCell(this);">
+        <input class="code-groupe__input" type="text" maxlength="1">
+      </div>
+    </div> 
+    
+    <div class="timer">
+      Отправить код повторно<br>через <span id="js-timer">02.00</span> сек.
+    </div>
+    
+  </main>
+  
+  <footer class="footer sign__footer">
+   
+    <button class="btn-main" disabled>Далее</button>
+    
+  </footer>
+</div>

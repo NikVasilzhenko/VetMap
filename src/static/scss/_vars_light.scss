@@ -1,0 +1,44 @@
+//цвета
+$clr-white: #fff;
+$clr-blue: #4385FF;
+$clr-error: #DB4437;
+$clr-green: #009688;
+
+$clr-txt: rgba(0, 0 , 0, .87);
+$clr-txt-light: rgba(0, 0 , 0, .6);
+$clr-txt-back: #aaa;
+$clr-input: $clr-txt;
+$clr-placeholder: $clr-txt-light;
+$clr-dark: $clr-txt;
+
+$clr-main-title: transparentize($clr-blue,.13);
+$clr-link: transparentize($clr-blue,.4);
+
+$clr-bg-body: #DCDCDC;
+$clr-bg-main: $clr-white;
+$clr-border: #DCDCDC;
+$clr-border-focus: $clr-txt-light;
+$clr-active-input: rgba(196, 196, 196, .2);
+
+$clr-main-btn-bg: $clr-blue;
+$clr-main-btn-txt: $clr-white;
+
+$clr-overlay-bg: rgba(0, 0, 0, .6);
+$clr-popup-bg: $clr-white;
+$clr-popup-brd: $clr-border;
+
+$clr-code-input-bg: $clr-white;
+$clr-code-input-bg-focus: $clr-white;
+$clr-code-input-txt: $clr-txt;
+$clr-code-input-txt-focuse: $clr-txt;
+$clr-code-input-brd: $clr-border;
+$clr-code-input-brd-focus: $clr-border-focus;
+$clr-code-input-placeholder: $clr-txt-light;
+$clr-code-input-shd: none;
+
+//шрифты
+$font-main: 'Roboto', 'Arial', sans-serif;
+
+//тени
+$shd-main: none;
+$shd-popup: 0 .4rem .4rem rgba(0, 0, 0, .25);

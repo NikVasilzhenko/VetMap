@@ -1,0 +1,15 @@
+.politic{
+  @include txt-s;
+  padding: 1.6rem;
+  & > *:last-child{margin-bottom: 0 !important;}
+  h2{
+    @include h2;
+    margin-bottom: 1.6rem;
+  }
+  h3{
+    @include txt-l;
+    margin-bottom: 1.6rem;
+  }
+  p, li{margin-bottom: 1.6rem;}
+  ul{padding-left: 16px;}
+}

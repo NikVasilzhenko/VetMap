@@ -1,0 +1,114 @@
+/*baisic*/
+html{
+  -webkit-locale: "ru-RU";
+  direction: ltr;
+  unicode-bidi: isolate;
+  min-height: 100%;
+}
+html, body{
+  min-height: 100%;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+html{
+  font-size: 11px;
+  @media only screen and (max-width : 479px){font-size: 10px;}
+  @media only screen and (max-width : 359px){font-size: 9px;}
+}
+body{
+  @include txt-l;
+  color: $clr-txt;
+  background: $clr-bg-body;
+  min-width: 310px; 
+  min-height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  opacity: 1;
+  -moz-font-feature-settings: 'kern';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+}
+
+/*clearfix*/
+.clearfix{
+  zoom: 1;
+  &:before,
+  &:after{
+    content: '';
+    display: table;
+  }
+  &:after{clear: both;}
+}
+
+/*box-sizing*/
+*, *:before, *:after, input[type="search"]{
+  box-sizing: border-box;
+}
+
+/*typographyc*/
+ol,ul,li,h1,h2,h3,h4,h5,h6,p,q,figure,figcaption,blockquote,cite,fieldset,hr{    
+  margin:0;
+  padding: 0;    
+  border: none;
+}
+ul li, ol li{list-style: none;}
+a{
+  text-decoration: none;
+  outline: none;
+  transition: .25s ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  &:-moz-any-link:focus ,
+  &:-moz-focusring,
+  &::-moz-focus-inner,
+  &::-moz-focus-outer{
+    outline: 0!important;
+    outline: none;
+  }
+  &:active {outline: none;}
+}
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*form*/
+.input{
+  /*reset*/
+  @include input-reset;
+  /*my styles*/
+  color: $clr-input;
+  background-color: $clr-bg-main;
+  bottom: 1px solid $clr-border;
+  /*placeholder*/
+  &::-webkit-input-placeholder{opacity: 1; color: $clr-placeholder;}
+  &::-moz-placeholder{opacity: 1; color: $clr-placeholder;}
+  &:-moz-placeholder{opacity: 1; color: $clr-placeholder;}
+  &:-ms-input-placeholder{opacity: 1; color: $clr-placeholder;}
+  &:placeholder{opacity: 1;color: $clr-placeholder;}
+  /*webkit autocomplit input*/
+  &:-webkit-autofill {
+      -webkit-box-shadow: inset 0 0 0 100px $clr-input !important;
+      -webkit-text-fill-color: $clr-bg-main !important;
+      color: $clr-bg-main !important;
+  }
+  /*error*/
+  &.error{
+      border-color: $clr-error;
+  }
+}
+.fieldset{
+  @include fieldset-reset;
+}
+.textarea{
+  /*reset*/
+  @include textarea-reset; 
+  @extend .input;
+  /*my styles*/
+  
+}
+.input:focus:required:valid,
+.textarea:focus:required:invalid{color: $clr-input;}
+.input:required:valid,
+.textarea:required:valid{color: $clr-input;}
