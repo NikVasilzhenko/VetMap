@@ -9,7 +9,7 @@
   animation: popapFadeIn .2s both;
   &__overlay{
     display: block;
-    background-color: $clr-overlay-bg;
+    background-color: var(--clr-overlay-bg);
     position: absolute;
     top: 0;
     left: 0;
@@ -23,7 +23,7 @@
       position: absolute;
       top: .8rem;
       right: .8rem;
-      color: $clr-white;
+      color: var(--clr-white);
     }
   }
   &__main{
@@ -33,9 +33,9 @@
     bottom: 3.2rem;
     left: 3.2rem;
     right: 3.2rem;
-    background-color: $clr-popup-bg;
-    border: 1px solid $clr-popup-brd;
-    box-shadow: $shd-popup;
+    background-color: var(--clr-popup-bg);
+    border: 1px solid var(--clr-popup-brd);
+    box-shadow: var(--shd-popup);
     border-radius: .4rem;
     overflow-y: auto;
   }

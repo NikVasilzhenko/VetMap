@@ -1,12 +1,12 @@
 //fonts
-@mixin     h1{font: 400 2.4rem/1.33 $font-main}
-@mixin     h2{font: 500 2rem/1.2    $font-main}
-@mixin     h3{font: 500 1.6rem/1.5  $font-main}
-@mixin     h4{font: 500 1.4rem/1.4  $font-main}
-@mixin  txt-l{font: 400 1.6rem/1.5  $font-main}
-@mixin  txt-m{font: 400 1.4rem/1.4  $font-main}
-@mixin  txt-s{font: 400 1.4rem/1.4  $font-main}
-@mixin txt-xs{font: 400 1.2rem/1.33 $font-main}
+@mixin     h1{font: 400 2.4rem/1.33 var(--font-main);}
+@mixin     h2{font: 500 2rem/1.2    var(--font-main);}
+@mixin     h3{font: 500 1.6rem/1.5  var(--font-main);}
+@mixin     h4{font: 500 1.4rem/1.4  var(--font-main);}
+@mixin  txt-l{font: 400 1.6rem/1.5  var(--font-main);}
+@mixin  txt-m{font: 400 1.4rem/1.4  var(--font-main);}
+@mixin  txt-s{font: 400 1.4rem/1.4  var(--font-main);}
+@mixin txt-xs{font: 400 1.2rem/1.33 var(--font-main);}
 
 //form resets
 @mixin btn-reset{

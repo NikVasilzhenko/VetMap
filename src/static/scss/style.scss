@@ -1,9 +1,10 @@
+//переменный и миксины
+@import "_vars.scss";
+
 //библиотеки и плагины
 @import "vendors.scss";
 
-//переменный и миксины
-//@import "_vars_dark.scss";
-@import "_vars_light.scss";
+//@import "_vars_light.scss";
 @import "_mix.scss";
 
 //базовые глобальные стили

@@ -37,3 +37,15 @@ let time = 60 * 2,
 if(display){
   startTimer(time, display);
 }
+
+//change color
+function changeColor(){
+  let bodyTag = document.querySelector('body');
+  if(bodyTag.classList.contains('light')){
+    bodyTag.classList.remove('light');
+    bodyTag.classList.add('dark');
+  } else{
+    bodyTag.classList.add('light');
+    bodyTag.classList.remove('dark');
+  }
+}

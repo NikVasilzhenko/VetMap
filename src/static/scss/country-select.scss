@@ -8,39 +8,39 @@
   }
   .iti--allow-dropdown input, .iti--allow-dropdown input[type=tel]{
     @include txt-s;
-    color: $clr-code-input-txt;
+    color: var(--clr-code-input-txt);
     border-radius: 4px;
     padding: 0 1.6rem 0 8.5rem;
     height: 4.6rem;
     line-height: calc(4.6rem - 2px);
     width: 100%;
-    border: 1px solid $clr-code-input-brd;
-    background-color: $clr-code-input-bg;
+    border: 1px solid var(--clr-code-input-brd);
+    background-color: var(--clr-code-input-bg);
     outline: none;
     &:focus{
-      border-color: $clr-code-input-brd-focus;
-      background-color: $clr-code-input-bg-focus;
-      color: $clr-code-input-txt-focuse;
-      &::-webkit-input-placeholder{opacity: 1; color: $clr-code-input-txt-focuse;}
-      &::-moz-placeholder{opacity: 1; color: $clr-code-input-txt-focuse;}
-      &:-moz-placeholder{opacity: 1; color: $clr-code-input-txt-focuse;}
-      &:-ms-input-placeholder{opacity: 1; color: $clr-code-input-txt-focuse;}
-      &:placeholder{opacity: 1;color: $clr-code-input-txt-focuse;}
+      border-color: var(--clr-code-input-brd-focus);
+      background-color: var(--clr-code-input-bg-focus);
+      color: var(--clr-code-input-txt-focuse);
+      &::-webkit-input-placeholder{opacity: 1; color: var(--clr-code-input-txt-focuse);}
+      &::-moz-placeholder{opacity: 1; color: var(--clr-code-input-txt-focuse);}
+      &:-moz-placeholder{opacity: 1; color: var(--clr-code-input-txt-focuse);}
+      &:-ms-input-placeholder{opacity: 1; color: var(--clr-code-input-txt-focuse);}
+      &:placeholder{opacity: 1;color: var(--clr-code-input-txt-focuse);}
     }
-    &::-webkit-input-placeholder{opacity: 1; color: $clr-txt-light;}
-    &::-moz-placeholder{opacity: 1; color: $clr-txt-light;}
-    &:-moz-placeholder{opacity: 1; color: $clr-txt-light;}
-    &:-ms-input-placeholder{opacity: 1; color: $clr-txt-light;}
-    &:placeholder{opacity: 1;color: $clr-txt-light;}
-    &:focus:required:valid{color: $clr-dark;}
-    &:required:valid{color: $clr-dark;;}    
+    &::-webkit-input-placeholder{opacity: 1; color: var(--clr-txt-light);}
+    &::-moz-placeholder{opacity: 1; color: var(--clr-txt-light);}
+    &:-moz-placeholder{opacity: 1; color: var(--clr-txt-light);}
+    &:-ms-input-placeholder{opacity: 1; color: var(--clr-txt-light);}
+    &:placeholder{opacity: 1;color: var(--clr-txt-light);}
+    &:focus:required:valid{color: var(--clr-dark);}
+    &:required:valid{color: var(--clr-dark);}    
   }
   .iti__flag-container{
     width: 6.8rem;
     outline: none;
   }
   .iti__selected-flag{
-    border-right: 1px solid $clr-border;
+    border-right: 1px solid var(--clr-border);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -53,7 +53,7 @@
     border: none;
     &::before{
       @include material-icons;
-      color: $clr-border;
+      color: var(--clr-border);
       content: 'keyboard_arrow_down';
     }
   }
@@ -66,7 +66,7 @@
   &::before{
     content: '';
     display: block;
-    background-color: $clr-overlay-bg;
+    background-color: var(--clr-overlay-bg);
     position: absolute;
     top: -3.2rem;
     bottom: -3.2rem;
@@ -81,13 +81,13 @@
     position: absolute;
     top: -2.4rem;
     right: -2.4rem;
-    color: $clr-white;
+    color: var(--clr-white);
   }
 }
 .iti-mobile .iti__country-list{
-  background-color: $clr-popup-bg;
-  border: 1px solid $clr-popup-brd;
-  box-shadow: $shd-popup;
+  background-color: var(--clr-popup-bg);
+  border: 1px solid var(--clr-popup-brd);
+  box-shadow: var(--shd-popup);
   border-radius: .4rem;
 }
 .iti-mobile .iti__country {
@@ -96,10 +96,10 @@
   line-height: 1.56rem;
 }
 .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag, .iti__country.iti__highlight {
-  background-color: $clr-active-input;
+  background-color: var(--clr-active-input);
 }
 .iti__country-name, .iti__flag-box{margin-right: 1.6rem;}
-.iti__country-name, .iti__flag-box{color: $clr-txt-light;}
+.iti__country-name, .iti__flag-box{color: var(--clr-txt-light);}
 .iti__country-name{margin-right: .3rem;}
-.iti__dial-code{color: $clr-txt-back;}
-.iti__divider{border-bottom-color: $clr-border;}
+.iti__dial-code{color: var(--clr-txt-back);}
+.iti__divider{border-bottom-color: var(--clr-border);}

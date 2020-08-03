@@ -1,5 +1,5 @@
 .timer{
   @include txt-xs;
-  color: $clr-txt-light;
+  color: var(--clr-txt-light);
   text-align: center;
 }

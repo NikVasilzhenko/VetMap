@@ -3,7 +3,7 @@
   height: 100vh;
   overflow: hidden;
   position: relative;
-  background-color: $clr-bg-main;
+  background-color: var(--clr-bg-main);
   margin: 0 auto;
   max-width: 767px;
 }

@@ -1,6 +1,6 @@
 .error-txt{
   @include txt-s;
-  color: $clr-error;
+  color: var(--clr-error);
   position: absolute;
   top: 6rem;
   right: 0;

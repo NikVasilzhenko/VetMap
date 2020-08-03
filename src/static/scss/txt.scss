@@ -1,6 +1,6 @@
 .txt{
   @include txt-m;
-  color: $clr-txt-light;
+  color: var(--clr-txt-light);
   margin-bottom: 2rem;
   &_center{text-align: center;}
 }

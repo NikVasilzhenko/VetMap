@@ -9,24 +9,24 @@
   &__input{
     @include input-reset;
     font-size: 2rem;
-    background-color: $clr-code-input-bg;
-    color: $clr-code-input-txt;
-    box-shadow: $clr-code-input-shd;
-    border: 1px solid $clr-code-input-brd;
+    background-color: var(--clr-code-input-bg);
+    color: var(--clr-code-input-txt);
+    box-shadow: var(--clr-code-input-shd);
+    border: 1px solid var(--clr-code-input-brd);
     border-radius: .4rem;
     width: 4.8rem;
     height: 4.8rem;
     text-align: center;
     margin: 0 .4rem;
     &:focus{
-      border-color: $clr-code-input-brd-focus;
-      background-color: $clr-code-input-bg-focus;
-      color: $clr-code-input-txt-focuse;
+      border-color: var(--clr-code-input-brd-focus);
+      background-color: var(--clr-code-input-bg-focus);
+      color: var(--clr-code-input-txt-focuse);
     }
     &.error{
-      border-color: $clr-error;
-      background-color: $clr-code-input-bg-focus;
-      color: $clr-code-input-txt-focuse;
+      border-color: var(--clr-error);
+      background-color: var(--clr-code-input-bg-focus);
+      color: var(--clr-code-input-txt-focuse);
     }
   }
 }

@@ -8,6 +8,6 @@
 }
 .link{
   @include txt-xs;
-  color: $clr-link;
+  color: var(--clr-link);
   text-decoration: underline;
 }

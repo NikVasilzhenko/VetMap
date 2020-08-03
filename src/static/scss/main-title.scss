@@ -2,5 +2,5 @@
   @include h1;
   text-align: center;
   margin-bottom: 1rem;
-  color: $clr-main-title;
+  color: var(--clr-main-title);
 }
