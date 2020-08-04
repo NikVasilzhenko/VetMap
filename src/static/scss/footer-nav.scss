@@ -1,0 +1,26 @@
+.footer-nav{
+  margin: 1.6rem 0;
+  ul{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    li{
+      width: calc(100% / 4);
+      text-align: center;
+    }
+  }
+  &__item{
+    color: var(--clr-txt-light);
+    text-align: center;
+    display: block;
+    font-size: 0;
+    &.active{color: var(--clr-green);}
+    &-icn{
+      display: inline-block;
+      position: relative;
+    }
+    &-txt{
+      @include txt-xs;
+    }
+  }
+}

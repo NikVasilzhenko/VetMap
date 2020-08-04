@@ -1,0 +1,16 @@
+.counter-baloon{
+  position: absolute;
+  top: -.2rem;
+  left: 100%;
+  transform: translateX(-50%);
+  min-width: 1.2rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  border-radius: .6rem;
+  text-align: center;
+  font-size: .9rem;
+  white-space: nowrap;
+  color: var(--clr-white);
+  padding: 0 .3rem;
+  background-color: var(--clr-green);
+}

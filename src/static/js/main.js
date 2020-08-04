@@ -49,3 +49,23 @@ function changeColor(){
     bodyTag.classList.remove('dark');
   }
 }
+
+//showClearBtn
+function showClearBtn($this){
+  if($this.value.trim() != false){
+    $this.classList.add('value');
+  } else{
+    $this.classList.remove('value');
+  }
+}
+
+//clearSearchInput
+function clearSearchInput(){
+  document.querySelector('.js-search-input').value = '';
+  document.querySelector('.js-search-input').classList.remove('value');
+}
+
+//alertClose
+function alertClose($this){
+  $this.parentElement.remove();
+}

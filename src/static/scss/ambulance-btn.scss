@@ -1,0 +1,23 @@
+.ambulance-btn{
+  @include btn-reset;
+  position: absolute;
+  top: 1.6rem;
+  right: .8rem;
+  z-index: 100;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  background-color: var(--clr-error);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg{
+    display: block;
+    font-size: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: var(--clr-white);
+    position: relative;
+    left: .2rem;
+  }
+}

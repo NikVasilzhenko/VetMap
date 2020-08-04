@@ -1,0 +1,39 @@
+.alert{
+  margin: 1.6rem 0;
+  position: relative;
+  background-color: var(--clr-error);
+  color: var(--clr-white);
+  @include txt-xs;
+  line-height: 2rem;
+  padding: 2.4rem 1.6rem 1.6rem;
+  border-radius: .4rem;
+  a{
+    color: var(--clr-white);
+    text-decoration: underline;
+  }
+  p{
+    margin: 1em 0;
+    &:first-of-type{margin-top: 0;}
+    &:last-of-type{margin-bottom: 0;}
+  }
+  &_fix{
+    position: absolute;
+    top: 1.6rem;
+    left: 1.6rem;
+    right: 1.6rem;
+    z-index: 111;
+    margin: 0;
+  }
+  &__close{
+    @include btn-reset;
+    font-size: 0;
+    position: absolute;
+    z-index: 2;
+    top: .8rem;
+    right: .8rem;
+    .material-icons{
+      font-size: 2rem;
+      color: var(--clr-white);
+    }
+  }
+}

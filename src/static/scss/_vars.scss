@@ -40,12 +40,24 @@
     --clr-code-input-placeholder: var(--clr-input-placeholder);
     --clr-code-input-shd: 0 .4rem .4rem rgba(0, 0, 0, .25);
 
+    --clr-header-bg: var(--clr-darg-alt);
+    --clr-header-btn: var(--clr-txt-light);
+    
+    --clr-footer-border: var(--clr-darg-alt);
+    --clr-footer-bg: var(--clr-darg-alt);
+    
+    --clr-fix-searc-bg: var(--clr-darg-alt);
+    --clr-fix-searc-txt: var(--clr-txt-light);
+    --clr-fix-searc-brd: var(--clr-darg-alt);
+    --clr-fix-searc-placeholder: var(--clr-txt-light);
+    
     //тени
     --shd-main: none;
     --shd-popup: 0 .4rem .4rem rgba(0, 0, 0, .25);
   }
   body.light{
     --clr-white:             #fff;
+    --clr-white-bg:          #FAFAFA;
     --clr-dark:              #263441;
     --clr-darg-alt:          #334557;
     --clr-blue:              #4385FF;
@@ -84,7 +96,18 @@
     --clr-code-input-brd:   var(--clr-border);
     --clr-code-input-brd-focus: var(--clr-border-focus);
     --clr-code-input-placeholder: var(--clr-txt-light);
-    --clr-code-input-shd: none;    
+    --clr-code-input-shd: none; 
+    
+    --clr-header-bg: var(--clr-white-bg);
+    --clr-header-btn: --clr-txt-light;
+    
+    --clr-footer-border: var(--clr-border);
+    --clr-footer-bg: var(--clr-white-bg);
+    
+    --clr-fix-searc-bg: var(--clr-white);
+    --clr-fix-searc-txt: var(--clr-txt-light);
+    --clr-fix-searc-brd: var(--clr-border);
+    --clr-fix-searc-placeholder: var(--clr-txt-light);
       
     //тени
     --shd-main: none;
