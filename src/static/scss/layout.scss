@@ -47,10 +47,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-right: .8rem;
   }
 }
-.content{
-  max-height: calc(100% - 7.2rem - 5.6rem);
+.content{  
   flex-grow: 1;
   position: relative;
   width: 100%;
@@ -58,4 +58,6 @@
   align-items: stretch;
   justify-content: flex-start;
   flex-direction: column;
+  max-height: calc(100% - 5.6rem);
+  &_middle{max-height: calc(100% - 7.2rem - 5.6rem);}
 }

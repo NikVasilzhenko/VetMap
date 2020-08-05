@@ -74,6 +74,18 @@ img{
 }
 .material-icons{font-size: 2.4rem;}
 
+.clr-bg-vet{background-color: var(--clr-bg-vet)}
+.clr-bg-grooming{background-color: var(--clr-bg-grooming)}
+.clr-bg-overexposure{background-color: var(--clr-bg-overexposure)}
+.clr-bg-paddock{background-color: var(--clr-bg-paddock)}
+.clr-bg-dogsitting{background-color: var(--clr-bg-dogsitting)}
+.clr-bg-petsupplies{background-color: var(--clr-bg-petsupplies)}
+.clr-bg-button{
+  background-color: var(--clr-bg-button);
+  border: 1px solid #DCDCDC;
+  color: rgba(0, 0, 0, .6);
+}
+
 /*form*/
 .input{
   /*reset*/

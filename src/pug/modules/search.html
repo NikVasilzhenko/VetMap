@@ -1,0 +1,157 @@
+<div class="layout">
+  <header class="header">
+    <div class="header__main">
+      <button class="header-btn" title="Назад">
+        <i aria-hidden="true" role="img" class="material-icons">arrow_back</i>
+      </button>
+    </div>
+    
+    <form action="#" method="get" class="search">
+      <div class="search__icn">
+        <i aria-hidden="true" role="img" class="material-icons">search</i>
+      </div>
+      <input type="search" name="search" class="search__input js-search-input" placeholder=" Поиск" oninput="showClearBtn(this);">
+      <button class="search__btn search__btn_clear" title="Очистить" type="button" onclick="clearSearchInput();">
+        <i aria-hidden="true" role="img" class="material-icons">close</i>
+      </button>
+      <button class="search__btn search__btn_mic" title="Голосовой поиск" type="button" onclick="openPopup('js-mic-popup')">
+        <i aria-hidden="true" role="img" class="material-icons">mic</i>
+      </button>
+    </form>
+  </header>
+  
+  <main class="content">
+    <div class="search-result">
+      <div class="categorys-nav">
+        <a href="javascript:void(0);" class="categorys-nav-item">
+          <div class="categorys-nav-item__icn clr-bg-vet">
+            <i aria-hidden="true" role="img" class="material-icons">medical_services</i>
+          </div>
+          <span class="categorys-nav-item__txt">Ветеренар</span>
+        </a>
+        <a href="javascript:void(0);" class="categorys-nav-item">
+          <div class="categorys-nav-item__icn clr-bg-grooming">
+            <i aria-hidden="true" role="img" class="material-icons">content_cut</i>
+          </div>
+          <span class="categorys-nav-item__txt">Груминг</span>
+        </a>
+        <a href="javascript:void(0);" class="categorys-nav-item">
+          <div class="categorys-nav-item__icn clr-bg-overexposure">
+            <i aria-hidden="true" role="img" class="material-icons">av_timer</i>
+          </div>
+          <span class="categorys-nav-item__txt">Передержка</span>
+        </a>
+        <a href="javascript:void(0);" class="categorys-nav-item">
+          <div class="categorys-nav-item__icn clr-bg-paddock">
+            <i aria-hidden="true" role="img" class="material-icons">pets</i>
+          </div>
+          <span class="categorys-nav-item__txt">Выгул</span>
+        </a>
+        <a href="javascript:void(0);" class="categorys-nav-item">
+          <div class="categorys-nav-item__icn clr-bg-dogsitting">
+            <i aria-hidden="true" role="img" class="material-icons">house</i>
+          </div>
+          <span class="categorys-nav-item__txt">Догситтинг</span>
+        </a>
+        <a href="javascript:void(0);" class="categorys-nav-item">
+          <div class="categorys-nav-item__icn clr-bg-petsupplies">
+            <i aria-hidden="true" role="img" class="material-icons">shopping_cart</i>
+          </div>
+          <span class="categorys-nav-item__txt">Зоотовары</span>
+        </a>
+        <a href="javascript:void(0);" class="categorys-nav-item categorys-nav-item_more" onclick="showAllItems(this);">
+          <div class="categorys-nav-item__icn clr-bg-button">
+            <i aria-hidden="true" role="img" class="material-icons">more_horiz</i>
+          </div>
+          <span class="categorys-nav-item__txt">Ещё</span>
+        </a>
+        <a href="javascript:void(0);" class="categorys-nav-item categorys-nav-item__more_close" onclick="hideSomeItems(this);">
+          <div class="categorys-nav-item__icn clr-bg-button">
+            <i aria-hidden="true" role="img" class="material-icons">close</i>
+          </div>
+          <span class="categorys-nav-item__txt">Скрыть</span>
+        </a>
+      </div>
+      <div class="search-result__list">
+        <div class="search-result__callback">Вы ещё ничего не искали / Ничего не найдено :(</div>
+        <!-- или -->
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        <div class="search-result__item">Груминг салон Теплый стан</div>
+        <div class="search-result__item">Очень осень очень очень очень очень очень ну ооочень длинный запрос</div>
+        
+        <button class="search-result__clear"><span>Очистить историю</span></button>
+      </div>
+    </div>
+    
+  </main>
+  
+  <div class="popup" id="js-mic-popup">
+    <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
+    <div class="popup__container">
+      <div class="popup__main">
+        <div class="mic">
+          <div class="mic__action"><!-- .rec/.ready/.error -->
+            <div class="mic__icn">
+              <i aria-hidden="true" role="img" class="material-icons">mic</i>
+            </div>
+            <div class="mic__txt">
+              <div class="mic__rec-dotes">
+                <span>.</span> <span>.</span> <span>.</span>
+              </div>
+              Говорите / Не слышно. Повторите 
+            </div>
+          </div>
+          <div class="mic__bar">
+            <button class="btn-main">Повторить</button>
+          </div>
+          <div class="mic__lang">Русский (Россия)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

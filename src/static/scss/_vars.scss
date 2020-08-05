@@ -1,4 +1,11 @@
 :root {
+  --clr-bg-vet:         #EB6C44;
+  --clr-bg-grooming:    #EDC85B;
+  --clr-bg-overexposure:#5B72ED;
+  --clr-bg-paddock:     #D355DE;
+  --clr-bg-dogsitting:  #86D754;
+  --clr-bg-petsupplies: #54BFD7;
+  --clr-bg-button:      #fff;
   body.dark{
     --clr-white:             #fff;
     --clr-dark:              #263441;
@@ -20,7 +27,7 @@
 
     --clr-bg-body:          #DCDCDC;
     --clr-bg-main:          var(--clr-dark);
-    --clr-border:           #DCDCDC;
+    --clr-border:           rgba(220, 220, 220, .5);
     --clr-border-focus:     var(--clr-txt-light);
     --clr-active-input:     rgba(196, 196, 196, .2);
 
@@ -50,6 +57,8 @@
     --clr-fix-searc-txt: var(--clr-txt-light);
     --clr-fix-searc-brd: var(--clr-darg-alt);
     --clr-fix-searc-placeholder: var(--clr-txt-light);
+    
+    --clr-popup: var(--clr-darg-alt);
     
     //тени
     --shd-main: none;
@@ -108,6 +117,8 @@
     --clr-fix-searc-txt: var(--clr-txt-light);
     --clr-fix-searc-brd: var(--clr-border);
     --clr-fix-searc-placeholder: var(--clr-txt-light);
+    
+    --clr-popup: var(--clr-white-bg);
       
     //тени
     --shd-main: none;

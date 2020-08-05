@@ -69,3 +69,35 @@ function clearSearchInput(){
 function alertClose($this){
   $this.parentElement.remove();
 }
+
+//showAllItems
+function showAllItems(Sthis){
+  Sthis.parentElement.classList.add('open');
+}
+function hideSomeItems(Sthis){
+  Sthis.parentElement.classList.remove('open');
+}
+
+//openPopup
+function openPopup(popupID){
+  let popup = document.getElementById(popupID);  
+  popup.style.display = 'block';
+  popup.classList.remove('close');  
+  popup.classList.add('open');  
+}
+
+//popupOverlayClose
+function popupOverlayClose($this){
+  let popup = $this.parentElement;
+  popup.classList.remove('open');  
+  popup.classList.add('close'); 
+  setTimeout( (function(){popup.style.display = 'none';}), 250);
+}
+
+//popupBtnClose
+function popupBtnClose($this){
+  let popup = $this.parentElement.parentElement.parentElement;
+  popup.classList.remove('open');  
+  popup.classList.add('close'); 
+  setTimeout( (function(){popup.style.display = 'none';}), 250);
+}
