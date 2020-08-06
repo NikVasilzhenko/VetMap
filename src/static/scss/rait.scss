@@ -1,0 +1,12 @@
+.rait{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0;
+  &__item{
+    .material-icons{
+      color: var(--clr-rait);
+      font-size: 1.4rem;
+    }
+  }
+}

@@ -28,7 +28,7 @@
   & > *:first-child{margin-top: 0 !important;}
   & > *:last-child{margin-bottom: 0 !important;}
   &_border{
-    border-top: 1px solid var(--clr-footer-border);
+    border-top: 1px solid var(--clr-border);
     background-color: var(--clr-footer-bg);
     height: 7.2rem;
   }

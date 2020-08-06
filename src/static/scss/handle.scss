@@ -1,0 +1,20 @@
+.handle{
+  position: absolute;
+  z-index: 3;
+  background-color: #C4C4C4;
+  border-radius: 2px;
+  &_gor{
+    top: 2px;
+    left: 50%;
+    margin-left: -2rem;
+    width: 4rem;
+    height: 2px;
+  }
+  &_ver{
+    left: 2px;
+    top: 50%;
+    margin-top: -2rem;
+    width: 2px;
+    height: 4rem;
+  }
+}

@@ -102,12 +102,22 @@ gulp.task('pic', function() {
   }));
 });
 
+//таск fonts
+gulp.task('fonts', function() {
+  return gulp.src('src/static/fonts/*')      
+    .pipe(gulp.dest('build/fonts/'))
+    .pipe(browserSync.reload({
+      stream: true
+  }));
+});
+
 //таск watch
 gulp.task('watch', function() {
   gulp.watch('src/pug/**/*', gulp.series('pug'));
   gulp.watch('src/static/scss/**/*', gulp.series('sass'));
   gulp.watch('src/static/js/*.js', gulp.series('scripts'));
   gulp.watch('src/static/img/**/*', gulp.series('pic'));
+  gulp.watch('src/static/fonts/*', gulp.series('fonts'));
 });
 
 //дефолтный таск, запускаемый по команде gulp
@@ -117,6 +127,7 @@ gulp.task('default', gulp.series(
     'sass', 
     'vendors', 
     'scripts', 
+    'fonts',
     'pic'), //параллельный запуск тасков
   gulp.parallel('watch', 'serve') //параллельный запуск тасков после выполнения предыдущих
 ));

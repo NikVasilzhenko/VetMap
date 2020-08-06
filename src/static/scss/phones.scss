@@ -1,0 +1,8 @@
+.phones{
+  width: calc(100% + 3.2rem);
+  margin: -1.6rem 0 0 -1.6rem;
+  li{
+    border-bottom: 1px solid var(--clr-border);
+    padding: .8rem 1.6rem;
+  }
+}

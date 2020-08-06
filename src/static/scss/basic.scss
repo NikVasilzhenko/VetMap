@@ -74,6 +74,18 @@ img{
 }
 .material-icons{font-size: 2.4rem;}
 
+.clr-bg-vet,
+.clr-bg-grooming,
+.clr-bg-overexposure,
+.clr-bg-paddock,
+.clr-bg-dogsitting,
+.clr-bg-petsupplies{
+  color: var(--clr-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
 .clr-bg-vet{background-color: var(--clr-bg-vet)}
 .clr-bg-grooming{background-color: var(--clr-bg-grooming)}
 .clr-bg-overexposure{background-color: var(--clr-bg-overexposure)}

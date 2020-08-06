@@ -1,0 +1,16 @@
+.more-menu{
+  li{margin-bottom: .8rem;}
+}
+.more-menu-item{
+  @include txt-xs;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--clr-txt-light);
+  &__icn{
+    margin-right: .8rem;
+    font-size: 0;   
+    position: relative;
+  }
+  &.red{color: var(--clr-error);}
+}

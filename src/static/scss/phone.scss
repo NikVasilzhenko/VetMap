@@ -1,0 +1,11 @@
+.phone{
+  @include txt-xs;
+  color: var(--clr-blue);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .material-icons{
+    display: block;
+    margin-right: .8rem;
+  }
+}

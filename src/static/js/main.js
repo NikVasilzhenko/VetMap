@@ -101,3 +101,14 @@ function popupBtnClose($this){
   popup.classList.add('close'); 
   setTimeout( (function(){popup.style.display = 'none';}), 250);
 }
+
+//fav
+function fav($this){
+  if($this.classList.contains('active')){
+    $this.classList.remove('active');
+    $this.lastElementChild.innerHTML = 'В избранное';
+  } else{
+    $this.classList.add('active');
+    $this.lastElementChild.innerHTML = 'В избранном';
+  }
+}

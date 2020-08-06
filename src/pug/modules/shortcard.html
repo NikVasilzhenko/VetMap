@@ -1,0 +1,392 @@
+<div class="layout">
+  <header class="header">
+    <div class="header__main">
+      <button class="header-btn" title="menu">
+        <i aria-hidden="true" role="img" class="material-icons">menu</i>
+      </button>
+      
+      <h2 class="header-title">Карта</h2>
+    </div>
+    
+    <a href="#" class="header-profile">
+      <div class="header-profile__username">+7 (988) 888 88 88</div>
+      <div class="header-profile__avatar">
+        <i aria-hidden="true" role="img" class="material-icons">account_circle</i>
+      </div>
+    </a>
+  </header>
+  
+  <main class="content content_middle">
+    <button class="ambulance-btn" title="Вызвать скорую помощ">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 1C13.6 1 11.48 2.21 10.22 4.05C10.23 4.04 10.23 4.03 10.24 4.02C9.84 4 9.42 4 9 4C4.58 4 1 4.5 1 8V18C1 18.88 1.39 19.67 2 20.22V22C2 22.55 2.45 23 3 23H4C4.55 23 5 22.55 5 22V21H13V22C13 22.55 13.45 23 14 23H15C15.55 23 16 22.55 16 22V20.22C16.61 19.67 17 18.88 17 18V14.92C20.39 14.43 23 11.53 23 8C23 4.13 19.87 1 16 1ZM4.5 19C3.67 19 3 18.33 3 17.5C3 16.67 3.67 16 4.5 16C5.33 16 6 16.67 6 17.5C6 18.33 5.33 19 4.5 19ZM3 13V8H9C9 9.96 9.81 11.73 11.11 13H3ZM13.5 19C12.67 19 12 18.33 12 17.5C12 16.67 12.67 16 13.5 16C14.33 16 15 16.67 15 17.5C15 18.33 14.33 19 13.5 19ZM16 13C13.24 13 11 10.76 11 8C11 5.24 13.24 3 16 3C18.76 3 21 5.24 21 8C21 10.76 18.76 13 16 13Z" />
+        <path d="M17.1019 4.5332V7.0332H19.6019V8.69987H17.1019V11.1999H15.4353V8.69987H12.9353V7.0332H15.4353V4.5332H17.1019Z" />
+      </svg>
+    </button>
+    <div class="map">
+      <div class="map__wrap" id="js-map"></div>
+      <button class="map__btn map__btn_position" title="Определить полажение" style="display: none;">
+        <i aria-hidden="true" role="img" class="material-icons">navigation</i>
+      </button>
+      <button class="map__btn map__btn_path" disabled title="Проложить путь" style="display: none;">
+        <i aria-hidden="true" role="img" class="material-icons">alt_route</i>
+      </button>
+    </div>
+    <form action="#" method="get" class="search search_fix">
+      <div class="search__icn">
+        <i aria-hidden="true" role="img" class="material-icons">search</i>
+      </div>
+      <input type="search" name="search" class="search__input js-search-input" placeholder=" Поиск" oninput="showClearBtn(this);">
+      <button class="search__btn search__btn_clear" title="Очистить" type="button" onclick="clearSearchInput();">
+        <i aria-hidden="true" role="img" class="material-icons">close</i>
+      </button>
+      <button class="search__btn search__btn_mic" title="Голосовой поиск" type="button">
+        <i aria-hidden="true" role="img" class="material-icons">mic</i>
+      </button>
+    </form>
+    
+    <div class="shortcard">
+      <div class="handle handle_gor"></div>
+      <div class="shortcard__rait">
+        <div class="rait">
+          <div class="rait__item">
+            <i aria-hidden="true" role="img" class="material-icons">star</i>
+          </div>
+          <div class="rait__item">
+            <i aria-hidden="true" role="img" class="material-icons">star</i>
+          </div>
+          <div class="rait__item">
+            <i aria-hidden="true" role="img" class="material-icons">star</i>
+          </div>
+          <div class="rait__item">
+            <i aria-hidden="true" role="img" class="material-icons">star_half</i>
+          </div>
+          <div class="rait__item">
+            <i aria-hidden="true" role="img" class="material-icons">star_border</i>
+          </div>
+        </div>
+      </div>
+      <div class="shortcard__header">
+        <div class="shortcard__header-main">
+          <div class="shortcard__header-icn clr-bg-vet">
+            <i aria-hidden="true" role="img" class="material-icons">medical_services</i>
+          </div>
+          <h2 class="shortcard__header-title">Клиника “Мокрый нос”</h2>
+        </div>
+        <div class="shortcard__block">
+          <i aria-hidden="true" role="img" class="material-icons">voice_over_off</i>
+        </div>
+      </div>
+      <div class="shortcard__desc">
+        <div class="shortcard__desc-row">
+          <span>Ветеренария</span>
+        </div>
+        <div class="shortcard__desc-row">
+          <span>ул. Пирогова, д.70/3, Москва</span>
+          <span>250 м</span>
+        </div>
+        <div class="shortcard__desc-row">
+          <span class="shortcard__desc-time close">Закрыто. Откроется в пн. в 9.00</span><!-- .close/.open -->
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer footer_border">
+    <nav class="footer-nav">
+      <ul>
+        <li>
+          <a href="javascript:void(0);" class="footer-nav__item">
+            <div class="footer-nav__item-icn"><i aria-hidden="true" role="img" class="material-icons">alt_route</i></div>
+            <div class="footer-nav__item-txt">Маршрут</div>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="footer-nav__item active" onclick="fav(this);">
+            <div class="footer-nav__item-icn">
+              <i aria-hidden="true" role="img" class="material-icons">favorite</i>              
+            </div>
+            <div class="footer-nav__item-txt">В избранном</div>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="footer-nav__item" onclick="openPopup('js-call-popup')">
+            <div class="footer-nav__item-icn">
+              <i aria-hidden="true" role="img" class="material-icons">phone_in_talk</i>
+            </div>
+            <div class="footer-nav__item-txt">Позвонить</div>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="footer-nav__item" onclick="openPopup('js-full-menu')">
+            <div class="footer-nav__item-icn"><i aria-hidden="true" role="img" class="material-icons">more_horiz</i></div>
+            <div class="footer-nav__item-txt">Ещё</div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+  
+  <div class="popup" id="js-full-menu">
+    <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
+    <div class="popup__container">
+      <div class="popup__header">
+        <div class="popup__header-main">
+          <h2 class="popup__header-title">Ещё</h2>
+        </div>
+        <button class="popup__close" title="Закрыть" onclick="popupBtnClose(this);">
+          <i aria-hidden="true" role="img" class="material-icons">close</i>
+        </button>
+      </div>
+      <div class="popup__main">
+        <ul class="more-menu">
+          <li>
+            <a href="javascript:void(0);" class="more-menu-item" onclick="openPopup('js-share-popup')">
+              <span class="more-menu-item__icn">
+                <i aria-hidden="true" role="img" class="material-icons">share</i>
+              </span>
+              <span class="more-menu-item__txt">Поделиться</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="more-menu-item" onclick="openPopup('js-chat-popup')">
+              <span class="more-menu-item__icn">
+                <i aria-hidden="true" role="img" class="material-icons">chat</i>
+                <div class="counter-baloon">2</div>
+              </span>
+              <span class="more-menu-item__txt">Открыть чат</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="more-menu-item red" onclick="openPopup('js-complaint-popup')">
+              <span class="more-menu-item__icn">
+                <i aria-hidden="true" role="img" class="material-icons">notification_important</i>
+              </span>
+              <span class="more-menu-item__txt">Пожаловаться</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="more-menu-item red" onclick="openPopup('js-block-popup')">
+              <span class="more-menu-item__icn">
+                <i aria-hidden="true" role="img" class="material-icons">record_voice_over</i>
+              </span>
+              <span class="more-menu-item__txt">Заблокировать</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Позвонить -->
+  <div class="popup" id="js-call-popup">
+    <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
+    <div class="popup__container">
+      <div class="popup__header">
+        <div class="popup__header-main">
+          <h2 class="popup__header-title">Позвонить</h2>
+        </div>
+        <button class="popup__close" title="Закрыть" onclick="popupBtnClose(this);">
+          <i aria-hidden="true" role="img" class="material-icons">close</i>
+        </button>
+      </div>
+      <div class="popup__main">
+        <ul class="phones">
+          <li>
+            <a href="tel:+79881111111" class="phone">
+              <i aria-hidden="true" role="img" class="material-icons">phone_in_talk</i>
+              <span>+7 (988) 111-11-11</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+79881111111" class="phone">
+              <i aria-hidden="true" role="img" class="material-icons">phone_in_talk</i>
+              <span>+7 (988) 111-11-11</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Поделиться -->
+  <div class="popup" id="js-share-popup">
+    <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
+    <div class="popup__container">
+      <div class="popup__header">
+        <div class="popup__header-main">
+          <h2 class="popup__header-title">Поделиться</h2>
+        </div>
+        <button class="popup__close" title="Закрыть" onclick="popupBtnClose(this);">
+          <i aria-hidden="true" role="img" class="material-icons">close</i>
+        </button>
+      </div>
+      <div class="popup__main">
+        <ul class="icn-menu">
+          <li>
+            <a href="#" class="icn-menu-item">
+              <div class="soc vk icn-menu-item__icn">
+                <i class="demo-icon icon-vk"></i>
+              </div>
+              <div class="icn-menu-item__txt">VK</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="icn-menu-item">
+              <div class="soc facebook icn-menu-item__icn">
+                <i class="demo-icon icon-facebook"></i>
+              </div>
+              <div class="icn-menu-item__txt">Facebook</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="icn-menu-item">
+              <div class="soc telegram icn-menu-item__icn">
+                <i class="demo-icon icon-telegram"></i>
+              </div>
+              <div class="icn-menu-item__txt">Telegram</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="icn-menu-item">
+              <div class="soc whatsapp icn-menu-item__icn">
+                <i class="demo-icon icon-whatsapp"></i>
+              </div>
+              <div class="icn-menu-item__txt">WhatsApp</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="icn-menu-item">
+              <div class="soc sms icn-menu-item__icn">
+                <i aria-hidden="true" role="img" class="material-icons">sms</i>
+              </div>
+              <div class="icn-menu-item__txt">SMS</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="icn-menu-item">
+              <div class="soc mail icn-menu-item__icn">
+                <i aria-hidden="true" role="img" class="material-icons">mail_outline</i>
+              </div>
+              <div class="icn-menu-item__txt">Email</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Чат -->
+  <div class="popup" id="js-chat-popup">
+    <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
+    <div class="popup__container">
+      <div class="popup__header">
+        <div class="popup__header-main">
+          <h2 class="popup__header-title">Начать переписку</h2>
+        </div>
+        <button class="popup__close" title="Закрыть" onclick="popupBtnClose(this);">
+          <i aria-hidden="true" role="img" class="material-icons">close</i>
+        </button>
+      </div>
+      <div class="popup__main">
+        <ul class="icn-menu">
+          <li>
+            <a href="#" class="icn-menu-item">
+              <div class="soc telegram icn-menu-item__icn">
+                <i class="demo-icon icon-telegram"></i>
+              </div>
+              <div class="icn-menu-item__txt">Telegram</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="icn-menu-item">
+              <div class="soc whatsapp icn-menu-item__icn">
+                <i class="demo-icon icon-whatsapp"></i>
+              </div>
+              <div class="icn-menu-item__txt">WhatsApp</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="icn-menu-item disable">
+              <div class="soc chat icn-menu-item__icn">
+                <i aria-hidden="true" role="img" class="material-icons">chat</i>
+              </div>
+              <div class="icn-menu-item__txt">Чат(скоро)</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Пожаловаться -->
+  <div class="popup" id="js-complaint-popup">
+    <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
+    <div class="popup__container">
+      <div class="popup__header">
+        <div class="popup__header-main">
+          <h2 class="popup__header-title">Пожаловаться</h2>
+        </div>
+        <button class="popup__close" title="Закрыть" onclick="popupBtnClose(this);">
+          <i aria-hidden="true" role="img" class="material-icons">close</i>
+        </button>
+      </div>
+      <div class="popup__main">        
+        <form action="#" class="complaint">
+          <label class="complaint__item">
+            <input type="radio" name="complaint">
+            <span class="complaint__item-txt">Неверный адрес</span>
+          </label>
+          <label class="complaint__item">
+            <input type="radio" name="complaint">
+            <span class="complaint__item-txt">Неверные контактные данные</span>
+          </label>
+          <label class="complaint__item">
+            <input type="radio" name="complaint">
+            <span class="complaint__item-txt">Нет лицензии</span>
+          </label>
+          <label class="complaint__item">
+            <input type="radio" name="complaint">
+            <span class="complaint__item-txt">Качество или перечень услуг не соответствует заявленым</span>
+          </label>
+          <label class="complaint__item">
+            <input type="radio" name="complaint" onchange="openHideComplaintForm('js-complaint-hide');">
+            <span class="complaint__item-txt">Другое...</span>
+          </label>
+          <div id="js-complaint-hide">
+            <textarea class="textarea" name="text" placeholder="Опишите причину..."></textarea>
+          </div>
+          <button class="btn-main" form="js-complaint-hide">Отправить</button>           
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script>
+  ymaps.ready(init);
+  var map;						
+  function init(){     
+    map = new ymaps.Map("js-map", {
+      center: [55.755814, 37.617635],
+      zoom: 16,
+      controls: []
+    });
+    map.behaviors.disable('scrollZoom');
+    placemark = new ymaps.Placemark(
+      [55.755814, 37.617635],
+      { 
+        balloonContent: 'Вы здесь!'
+      },
+      {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/svg/baloon.svg',
+        iconImageSize: [24, 24],
+        iconImageOffset: [-12, -12]
+      }
+    );
+    map.geoObjects.add(placemark);
+    
+  };    
+</script> 
