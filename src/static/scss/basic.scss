@@ -105,7 +105,7 @@ img{
   /*my styles*/
   color: var(--clr-input);
   background-color: var(--clr-bg-main);
-  bottom: 1px solid var(--clr-border);
+  border: 1px solid var(--clr-border);
   /*placeholder*/
   &::-webkit-input-placeholder{opacity: 1; color: var(--clr-placeholder);}
   &::-moz-placeholder{opacity: 1; color: var(--clr-placeholder);}
@@ -126,11 +126,33 @@ img{
 .fieldset{
   @include fieldset-reset;
 }
-.textarea{
+.textarea{  
   /*reset*/
-  @include textarea-reset; 
-  @extend .input;
+  @include input-reset;
+  @include textarea-reset;
   /*my styles*/
+  color: rgba(0, 0 , 0, .87);
+  background-color: #fff;
+  border: 1px solid var(--clr-border);
+  padding: 1.2rem 1.6rem;
+  height: 14.8rem;
+  border-radius: .4rem;
+  /*placeholder*/
+  &::-webkit-input-placeholder{opacity: 1; color: rgba(0, 0 , 0, .6);}
+  &::-moz-placeholder{opacity: 1; color: rgba(0, 0 , 0, .6);}
+  &:-moz-placeholder{opacity: 1; color: rgba(0, 0 , 0, .6);}
+  &:-ms-input-placeholder{opacity: 1; color: rgba(0, 0 , 0, .6);}
+  &:placeholder{opacity: 1;color: rgba(0, 0 , 0, .6);}
+  /*webkit autocomplit input*/
+  &:-webkit-autofill {
+      -webkit-box-shadow: inset 0 0 0 100px rgba(0, 0 , 0, .87) !important;
+      -webkit-text-fill-color: #fff !important;
+      color: #fff !important;
+  }
+  /*error*/
+  &.error{
+      border-color: var(--clr-error);
+  }
   
 }
 .input:focus:required:valid,

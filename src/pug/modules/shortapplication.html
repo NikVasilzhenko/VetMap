@@ -68,10 +68,10 @@
       </div>
       <div class="shortcard__header">
         <div class="shortcard__header-main">
-          <div class="shortcard__header-icn clr-bg-vet">
-            <i aria-hidden="true" role="img" class="material-icons">medical_services</i>
+          <div class="shortcard__header-icn shortcard__header-icn_user">
+            <i aria-hidden="true" role="img" class="material-icons">account_circle</i>
           </div>
-          <h2 class="shortcard__header-title">Клиника “Мокрый нос”</h2>
+          <h2 class="shortcard__header-title">+7 (988) 888-88-88</h2>
         </div>
         <div class="shortcard__block">
           <i aria-hidden="true" role="img" class="material-icons">voice_over_off</i>
@@ -86,9 +86,15 @@
           <span>250 м</span>
         </div>
         <div class="shortcard__desc-row">
-          <span class="shortcard__desc-time operating-time close">Закрыто. Откроется в пн. в 9.00</span><!-- .close/.open -->
+          <span class="shortcard__desc-animal">Собака. Немецкая овчарка</span><!-- .close/.open -->
         </div>
       </div>
+      <div class="shortcard__txt"><!-- если текст короткий и не требует кнопки "подробнее" , то добавить класс .all-->
+        У собаки наблюдается опухание суставов на задних лапах, неприятный запох изо рта, повышенная слезоточивость глаз. На носу появ...
+      </div>
+      <div class="shortcard__more">
+        <a href="#">Читать всё</a>
+      </div>      
     </div>
   </main>
   
@@ -110,13 +116,14 @@
           </a>
         </li>
         <li>
-          <a href="javascript:void(0);" class="footer-nav__item" onclick="openPopup('js-call-popup')">
+          <a href="javascript:void(0);" class="footer-nav__item" onclick="openPopup('js-chat-popup')">
             <div class="footer-nav__item-icn">
-              <i aria-hidden="true" role="img" class="material-icons">phone_in_talk</i>
+              <i aria-hidden="true" role="img" class="material-icons">chat</i>
+              <div class="counter-baloon">2</div>
             </div>
-            <div class="footer-nav__item-txt">Позвонить</div>
+            <div class="footer-nav__item-txt">Чат</div>
           </a>
-        </li>
+        </li> 
         <li>
           <a href="javascript:void(0);" class="footer-nav__item" onclick="openPopup('js-full-menu')">
             <div class="footer-nav__item-icn"><i aria-hidden="true" role="img" class="material-icons">more_horiz</i></div>
@@ -139,24 +146,7 @@
         </button>
       </div>
       <div class="popup__main">
-        <ul class="more-menu">
-          <li>
-            <a href="javascript:void(0);" class="more-menu-item" onclick="openPopup('js-share-popup')">
-              <span class="more-menu-item__icn">
-                <i aria-hidden="true" role="img" class="material-icons">share</i>
-              </span>
-              <span class="more-menu-item__txt">Поделиться</span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="more-menu-item" onclick="openPopup('js-chat-popup')">
-              <span class="more-menu-item__icn">
-                <i aria-hidden="true" role="img" class="material-icons">chat</i>
-                <div class="counter-baloon">2</div>
-              </span>
-              <span class="more-menu-item__txt">Открыть чат</span>
-            </a>
-          </li>
+        <ul class="more-menu">          
           <li>
             <a href="javascript:void(0);" class="more-menu-item red" onclick="openPopup('js-complaint-popup')">
               <span class="more-menu-item__icn">
@@ -171,104 +161,6 @@
                 <i aria-hidden="true" role="img" class="material-icons">record_voice_over</i>
               </span>
               <span class="more-menu-item__txt">Заблокировать</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Позвонить -->
-  <div class="popup" id="js-call-popup">
-    <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
-    <div class="popup__container">
-      <div class="popup__header">
-        <div class="popup__header-main">
-          <h2 class="popup__header-title">Позвонить</h2>
-        </div>
-        <button class="popup__close" title="Закрыть" onclick="popupBtnClose(this);">
-          <i aria-hidden="true" role="img" class="material-icons">close</i>
-        </button>
-      </div>
-      <div class="popup__main">
-        <ul class="phones">
-          <li>
-            <a href="tel:+79881111111" class="phone">
-              <i aria-hidden="true" role="img" class="material-icons">phone_in_talk</i>
-              <span>+7 (988) 111-11-11</span>
-            </a>
-          </li>
-          <li>
-            <a href="tel:+79881111111" class="phone">
-              <i aria-hidden="true" role="img" class="material-icons">phone_in_talk</i>
-              <span>+7 (988) 111-11-11</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Поделиться -->
-  <div class="popup" id="js-share-popup">
-    <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
-    <div class="popup__container">
-      <div class="popup__header">
-        <div class="popup__header-main">
-          <h2 class="popup__header-title">Поделиться</h2>
-        </div>
-        <button class="popup__close" title="Закрыть" onclick="popupBtnClose(this);">
-          <i aria-hidden="true" role="img" class="material-icons">close</i>
-        </button>
-      </div>
-      <div class="popup__main">
-        <ul class="icn-menu">
-          <li>
-            <a href="#" class="icn-menu-item">
-              <div class="soc vk icn-menu-item__icn">
-                <i class="demo-icon icon-vk"></i>
-              </div>
-              <div class="icn-menu-item__txt">VK</div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="icn-menu-item">
-              <div class="soc facebook icn-menu-item__icn">
-                <i class="demo-icon icon-facebook"></i>
-              </div>
-              <div class="icn-menu-item__txt">Facebook</div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="icn-menu-item">
-              <div class="soc telegram icn-menu-item__icn">
-                <i class="demo-icon icon-telegram"></i>
-              </div>
-              <div class="icn-menu-item__txt">Telegram</div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="icn-menu-item">
-              <div class="soc whatsapp icn-menu-item__icn">
-                <i class="demo-icon icon-whatsapp"></i>
-              </div>
-              <div class="icn-menu-item__txt">WhatsApp</div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="icn-menu-item">
-              <div class="soc sms icn-menu-item__icn">
-                <i aria-hidden="true" role="img" class="material-icons">sms</i>
-              </div>
-              <div class="icn-menu-item__txt">SMS</div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="icn-menu-item">
-              <div class="soc mail icn-menu-item__icn">
-                <i aria-hidden="true" role="img" class="material-icons">mail_outline</i>
-              </div>
-              <div class="icn-menu-item__txt">Email</div>
             </a>
           </li>
         </ul>

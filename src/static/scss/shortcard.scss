@@ -25,6 +25,12 @@
       position: relative;
       overflow: hidden;      
       .material-icons{font-size: 1.6rem;}
+      &_user{
+        .material-icons{
+          font-size: 3.2rem;
+          color: var(--clr-txt);
+        }
+      }
       img{
         top: 50%;
         left: 50%;
@@ -54,6 +60,33 @@
         display: block;
         &:nth-child(2){padding-left: 1.2rem;}
       }
+    }
+  }
+  &__txt{
+    @include txt-s;
+    color: var(--clr-txt-light);
+    margin: .8rem 0 .4rem;
+    max-height: 5.8rem;
+    overflow: hidden;
+    position: relative;
+    &::before{content: '“'}
+    &::after{content: '”';}
+    &:not(.all)::after{
+      content: '...”';
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: var(--clr-popup);
+    }
+  }
+  &__more{
+    margin-top: .4rem;
+    text-align: right;
+    @include txt-s;    
+    a{
+      color: var(--clr-link);
+      text-decoration: underline;
     }
   }
 }

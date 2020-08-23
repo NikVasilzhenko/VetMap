@@ -1,0 +1,13 @@
+.confirm-message{
+  text-align: center;
+  padding: 3.2rem 0;
+  &__title{
+    @include h1;
+    color: rgba(104, 158, 214, .85);
+    margin-bottom: 1rem;
+  }
+  &__txt{
+    @include txt-m;
+    color: var(--clr-txt-light);
+  }
+}

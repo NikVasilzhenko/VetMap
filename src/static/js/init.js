@@ -25,3 +25,5 @@ if(input){
       utilsScript: "build/js/utils.js",
     });
 }
+
+lightGallery(document.getElementById('js-lightgallery'))

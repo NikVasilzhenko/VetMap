@@ -1,0 +1,65 @@
+.create-review{
+  &__fieldset{
+    text-align: center;
+    margin-bottom: 1.6rem;
+  }
+  &__legend{
+    @include h4;
+    text-align: center;
+    display: block;
+    margin-bottom: .4rem;
+  }
+  .textarea{margin-bottom: 1.6rem;}
+}
+.thumbs-select{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__label{
+    display: block;
+    margin: 0 .8rem;
+    font-size: 0;
+    .material-icons{
+      font-size: 3.2rem;
+      color: var(--clr-txt-light);
+      opacity: .5;
+    }
+    input{display: none;}
+    &.dislike{
+      input{
+        &:checked + .material-icons{
+          color: var(--clr-error);
+          opacity: 1;
+        }
+      }
+    }
+    &.like{
+      input{
+        &:checked + .material-icons{
+          color: var(--clr-green);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.rait-select{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__label{
+    display: block;
+    margin: 0 .2rem;
+    font-size: 0;
+    .material-icons{
+      font-size: 3.2rem;
+      color: var(--clr-txt-light);
+      opacity: .5;
+      &.active{
+        color: #EDC85B;
+        opacity: 1;
+      }
+    }
+    input{display: none;}
+  }
+}

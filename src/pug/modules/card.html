@@ -1,95 +1,178 @@
-<div class="layout">
-  <header class="header">
-    <div class="header__main">
-      <button class="header-btn" title="menu">
-        <i aria-hidden="true" role="img" class="material-icons">menu</i>
-      </button>
-      
-      <h2 class="header-title">Карта</h2>
-    </div>
-    
-    <a href="#" class="header-profile">
-      <div class="header-profile__username">+7 (988) 888 88 88</div>
-      <div class="header-profile__avatar">
-        <i aria-hidden="true" role="img" class="material-icons">account_circle</i>
-      </div>
-    </a>
-  </header>
-  
-  <main class="content content_middle">
-    <button class="ambulance-btn" title="Вызвать скорую помощ">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16 1C13.6 1 11.48 2.21 10.22 4.05C10.23 4.04 10.23 4.03 10.24 4.02C9.84 4 9.42 4 9 4C4.58 4 1 4.5 1 8V18C1 18.88 1.39 19.67 2 20.22V22C2 22.55 2.45 23 3 23H4C4.55 23 5 22.55 5 22V21H13V22C13 22.55 13.45 23 14 23H15C15.55 23 16 22.55 16 22V20.22C16.61 19.67 17 18.88 17 18V14.92C20.39 14.43 23 11.53 23 8C23 4.13 19.87 1 16 1ZM4.5 19C3.67 19 3 18.33 3 17.5C3 16.67 3.67 16 4.5 16C5.33 16 6 16.67 6 17.5C6 18.33 5.33 19 4.5 19ZM3 13V8H9C9 9.96 9.81 11.73 11.11 13H3ZM13.5 19C12.67 19 12 18.33 12 17.5C12 16.67 12.67 16 13.5 16C14.33 16 15 16.67 15 17.5C15 18.33 14.33 19 13.5 19ZM16 13C13.24 13 11 10.76 11 8C11 5.24 13.24 3 16 3C18.76 3 21 5.24 21 8C21 10.76 18.76 13 16 13Z" />
-        <path d="M17.1019 4.5332V7.0332H19.6019V8.69987H17.1019V11.1999H15.4353V8.69987H12.9353V7.0332H15.4353V4.5332H17.1019Z" />
-      </svg>
-    </button>
-    <div class="map">
-      <div class="map__wrap" id="js-map"></div>
-      <button class="map__btn map__btn_position" title="Определить полажение" style="display: none;">
-        <i aria-hidden="true" role="img" class="material-icons">navigation</i>
-      </button>
-      <button class="map__btn map__btn_path" disabled title="Проложить путь" style="display: none;">
-        <i aria-hidden="true" role="img" class="material-icons">alt_route</i>
-      </button>
-    </div>
-    <form action="#" method="get" class="search search_fix">
-      <div class="search__icn">
-        <i aria-hidden="true" role="img" class="material-icons">search</i>
-      </div>
-      <input type="search" name="search" class="search__input js-search-input" placeholder=" Поиск" oninput="showClearBtn(this);">
-      <button class="search__btn search__btn_clear" title="Очистить" type="button" onclick="clearSearchInput();">
-        <i aria-hidden="true" role="img" class="material-icons">close</i>
-      </button>
-      <button class="search__btn search__btn_mic" title="Голосовой поиск" type="button">
-        <i aria-hidden="true" role="img" class="material-icons">mic</i>
-      </button>
-    </form>
-    
-    <div class="shortcard">
-      <div class="handle handle_gor"></div>
-      <div class="shortcard__rait">
-        <div class="rait">
-          <div class="rait__item">
-            <i aria-hidden="true" role="img" class="material-icons">star</i>
+<div class="layout">  
+  <main class="content content_top">
+   
+    <div class="card">
+      <div class="card__top">
+        <div class="header card__header">
+          <button class="header-btn card__header-btn" title="Назад">
+            <i aria-hidden="true" role="img" class="material-icons">arrow_back</i>
+          </button>
+          <div class="card__header-rait">
+            <div class="rait">
+              <div class="rait__item">
+                <i aria-hidden="true" role="img" class="material-icons">star</i>
+              </div>
+              <div class="rait__item">
+                <i aria-hidden="true" role="img" class="material-icons">star</i>
+              </div>
+              <div class="rait__item">
+                <i aria-hidden="true" role="img" class="material-icons">star</i>
+              </div>
+              <div class="rait__item">
+                <i aria-hidden="true" role="img" class="material-icons">star_half</i>
+              </div>
+              <div class="rait__item">
+                <i aria-hidden="true" role="img" class="material-icons">star_border</i>
+              </div>
+            </div>
           </div>
-          <div class="rait__item">
-            <i aria-hidden="true" role="img" class="material-icons">star</i>
-          </div>
-          <div class="rait__item">
-            <i aria-hidden="true" role="img" class="material-icons">star</i>
-          </div>
-          <div class="rait__item">
-            <i aria-hidden="true" role="img" class="material-icons">star_half</i>
-          </div>
-          <div class="rait__item">
-            <i aria-hidden="true" role="img" class="material-icons">star_border</i>
+          <div class="card__header-bar">
+            <div class="card__header-bar-icn">
+              <i aria-hidden="true" role="img" class="material-icons">favorite</i>
+            </div>
+            <div class="card__header-bar-icn">
+              <i aria-hidden="true" role="img" class="material-icons">voice_over_off</i>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="shortcard__header">
-        <div class="shortcard__header-main">
-          <div class="shortcard__header-icn clr-bg-vet">
+        <h1 class="card__title">“Мокрый нос”</h1>
+        <p class="card__category">Ветеренария</p>
+        <div class="card__avatar">
+          <div class="card__avatar-icn clr-bg-vet">
             <i aria-hidden="true" role="img" class="material-icons">medical_services</i>
           </div>
-          <h2 class="shortcard__header-title">Клиника “Мокрый нос”</h2>
-        </div>
-        <div class="shortcard__block">
-          <i aria-hidden="true" role="img" class="material-icons">voice_over_off</i>
         </div>
       </div>
-      <div class="shortcard__desc">
-        <div class="shortcard__desc-row">
-          <span>Ветеренария</span>
-        </div>
-        <div class="shortcard__desc-row">
-          <span>ул. Пирогова, д.70/3, Москва</span>
-          <span>250 м</span>
-        </div>
-        <div class="shortcard__desc-row">
-          <span class="shortcard__desc-time operating-time close">Закрыто. Откроется в пн. в 9.00</span><!-- .close/.open -->
+      <div class="card__main">
+        <nav class="card__nav">
+          <button class="btn card__nav-item active">Информация</button>
+          <button class="btn card__nav-item">Отзывы (3)</button>
+        </nav>
+        <div class="card__section">
+          <div class="card__row">
+            <div class="card__row-title">
+              <i aria-hidden="true" role="img" class="material-icons">place</i> <span>Адрес:</span>
+            </div>
+            <div class="card__row-main">
+              111 950 Москва <br>ул. Пирогова, д.70/3 <br>
+              <a href="#">Показать на карте</a>
+            </div>
+            <div class="card__row-end">250 м</div>
+          </div>
+          <div class="card__row">
+            <div class="card__row-title">
+              <i aria-hidden="true" role="img" class="material-icons">school</i> <span>Стаж работы:</span>
+            </div>
+            <div class="card__row-main">более 7 лет</div>            
+          </div>
+          <div class="card__row">
+            <div class="card__row-title">
+              <i aria-hidden="true" role="img" class="material-icons">av_timer</i> <span>График:</span>
+            </div>
+            <div class="card__row-main">
+              Пн - Пт 9.00 - 22.00 <br> Cб 10.30 - 16.30 <br><span class="red">Вс выходной</span>
+            </div>
+            <div class="card__row-end">
+              <div class="operating-time close">Закрыто</div>
+            </div>
+          </div>
+          <div class="card__row">
+            <div class="card__row-title">
+              <i aria-hidden="true" role="img" class="material-icons">account_balance_wallet</i> <span>Мин. чек:</span>
+            </div>
+            <div class="card__row-main">1 000 р.</div>            
+          </div>
+          <div class="card__icons">
+            <div class="card__icons-item">
+              <div class="card__icons-icn">
+                <i aria-hidden="true" role="img" class="material-icons">directions_bus</i>
+              </div>
+              <div class="card__icons-txt">Выезд <br>на дом</div>
+            </div>
+            <div class="card__icons-item">
+              <div class="card__icons-icn">
+                <i aria-hidden="true" role="img" class="material-icons">wifi</i>
+              </div>
+              <div class="card__icons-txt">УЗИ</div>
+            </div>
+            <div class="card__icons-item">
+              <div class="card__icons-icn">
+                <i aria-hidden="true" role="img" class="material-icons">batch_prediction</i>
+              </div>
+              <div class="card__icons-txt">Рентген</div>
+            </div>
+            <div class="card__icons-item">
+              <div class="card__icons-icn">
+                <i aria-hidden="true" role="img" class="material-icons">add_business</i>
+              </div>
+              <div class="card__icons-txt">Стационар</div>
+            </div>
+            <div class="card__icons-item">
+              <div class="card__icons-icn">
+                <i aria-hidden="true" role="img" class="material-icons">biotech</i>
+              </div>
+              <div class="card__icons-txt">Лаборатория</div>
+            </div>
+            <div class="card__icons-item">
+              <div class="card__icons-icn">
+                <i aria-hidden="true" role="img" class="material-icons">medical_services</i>
+              </div>
+              <div class="card__icons-txt">Аптека</div>
+            </div>
+          </div>
+          <div class="card__description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore impedit repellat perspiciatis magnam aperiam reprehenderit temporibus distinctio vitae aspernatur facere iste praesentium, eaque cupiditate at tempora odit quisquam, eligendi a ducimus ratione culpa amet aliquam et. Distinctio rem numquam illum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam hic facilis soluta asperiores consequatur possimus illum facere mollitia autem sit sunt eveniet porro iure eum, magni voluptatum accusamus consectetur fugiat dolore dolorem minus qui. Sint illum aliquam aut quos deleniti.</p>
+          </div>
+          <div class="gallery card__gallery">
+            <ul class="gallery__grid" id="js-lightgallery">
+              <li data-responsive="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 375, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 480, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 800" data-src="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg"
+      data-sub-html="<h4>Кот</h4><p>Жирный и рыжий кот</p>">
+                <a href="" style="background-image: url(https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg)"></a>
+              </li>
+              <li data-responsive="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 375, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 480, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 800" data-src="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg"
+      data-sub-html="<h4>Кот</h4><p>Жирный и рыжий кот</p>">
+                <a href="" style="background-image: url(https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg)"></a>
+              </li>
+              <li data-responsive="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 375, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 480, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 800" data-src="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg"
+      data-sub-html="<h4>Кот</h4><p>Жирный и рыжий кот</p>">
+                <a href="" style="background-image: url(https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg)"></a>
+              </li>
+              <li data-responsive="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 375, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 480, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 800" data-src="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg"
+      data-sub-html="<h4>Кот</h4><p>Жирный и рыжий кот</p>">
+                <a href="" style="background-image: url(https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg)"></a>
+              </li>
+              <li data-responsive="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 375, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 480, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 800" data-src="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg"
+      data-sub-html="<h4>Кот</h4><p>Жирный и рыжий кот</p>">
+                <a href="" style="background-image: url(https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg)"></a>
+              </li>
+              <li data-responsive="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 375, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 480, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 800" data-src="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg"
+      data-sub-html="<h4>Кот</h4><p>Жирный и рыжий кот</p>">
+                <a href="" style="background-image: url(https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg)"></a>
+              </li>
+              <li data-responsive="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 375, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 480, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 800" data-src="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg"
+      data-sub-html="<h4>Кот</h4><p>Жирный и рыжий кот</p>">
+                <a href="" style="background-image: url(https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg)"></a>
+              </li>
+              <li data-responsive="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 375, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 480, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 800" data-src="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg"
+      data-sub-html="<h4>Кот</h4><p>Жирный и рыжий кот</p>">
+                <a href="" style="background-image: url(https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg)"></a>
+              </li>
+              <li data-responsive="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 375, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 480, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 800" data-src="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg"
+      data-sub-html="<h4>Кот</h4><p>Жирный и рыжий кот</p>">
+                <a href="" style="background-image: url(https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg)"></a>
+              </li>
+              <li data-responsive="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 375, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 480, https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg 800" data-src="https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg"
+      data-sub-html="<h4>Кот</h4><p>Жирный и рыжий кот</p>">
+                <a href="" style="background-image: url(https://img4.goodfon.ru/original/1024x1024/0/25/kot-koshka-kotenok-kotionok-ryzhii-stol-bantik-milyi.jpg)"></a>
+              </li>
+            </ul>
+            
+          </div>
         </div>
       </div>
     </div>
+    
   </main>
   
   <footer class="footer footer_border">
@@ -125,8 +208,7 @@
         </li>
       </ul>
     </nav>
-  </footer>
-  
+  </footer>  
   <div class="popup" id="js-full-menu">
     <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
     <div class="popup__container">
@@ -176,8 +258,7 @@
         </ul>
       </div>
     </div>
-  </div>
-  
+  </div>  
   <!-- Позвонить -->
   <div class="popup" id="js-call-popup">
     <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
@@ -207,8 +288,7 @@
         </ul>
       </div>
     </div>
-  </div>
-  
+  </div>  
   <!-- Поделиться -->
   <div class="popup" id="js-share-popup">
     <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
@@ -274,8 +354,7 @@
         </ul>
       </div>
     </div>
-  </div>
-  
+  </div>  
   <!-- Чат -->
   <div class="popup" id="js-chat-popup">
     <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
@@ -317,8 +396,7 @@
         </ul>
       </div>
     </div>
-  </div>
-  
+  </div>  
   <!-- Пожаловаться -->
   <div class="popup" id="js-complaint-popup">
     <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
@@ -367,8 +445,7 @@
         </form>
       </div>
     </div>
-  </div>
-  
+  </div>  
   <!-- Притензия принята -->
   <div class="popup" id="js-complaint-confirm-popup">
     <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
@@ -388,8 +465,7 @@
         </div>
       </div>
     </div>
-  </div>
-  
+  </div>  
   <!-- Заблокировано -->
   <div class="popup" id="js-block-on-popup">
     <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
@@ -409,8 +485,7 @@
         </div>
       </div>
     </div>
-  </div>
-  
+  </div>  
   <!-- Разблокировано -->
   <div class="popup" id="js-block-off-popup">
     <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
@@ -432,31 +507,3 @@
     </div>
   </div>
 </div>
-
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-<script>
-  ymaps.ready(init);
-  var map;						
-  function init(){     
-    map = new ymaps.Map("js-map", {
-      center: [55.755814, 37.617635],
-      zoom: 16,
-      controls: []
-    });
-    map.behaviors.disable('scrollZoom');
-    placemark = new ymaps.Placemark(
-      [55.755814, 37.617635],
-      { 
-        balloonContent: 'Вы здесь!'
-      },
-      {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/svg/baloon.svg',
-        iconImageSize: [24, 24],
-        iconImageOffset: [-12, -12]
-      }
-    );
-    map.geoObjects.add(placemark);
-    
-  };    
-</script> 

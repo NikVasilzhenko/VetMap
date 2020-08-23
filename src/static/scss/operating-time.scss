@@ -1,0 +1,17 @@
+.operating-time{
+  padding-right: 1rem;
+  position: relative;
+  &::after{
+    content: '';
+    display: block;
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -.3rem;
+  }
+  &.close::after{background-color: var(--clr-error);}
+  &.open::after{background-color: var(--clr-green);}
+}

@@ -1,0 +1,89 @@
+.reviews{
+  &__footer{
+    .btn-main{margin-bottom: 0;}
+  }
+}
+
+.review{
+  padding: 1.6rem 0;
+  border-top: 1px solid rgba(220, 220, 220, .5);
+  &:first-child{border-top: none;}
+  &__profile,
+  &__bar,
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__header{margin-bottom: .6px;}
+  &__ava{
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .8rem;
+    border: 1px solid rgba(220, 220, 220, .5);
+    .material-icons{
+      font-size: 3.2rem;
+      color: rgba(0, 0, 0, .6);
+    }
+  }
+  &__profile{flex-grow: 1;}
+  &__usernaime{
+    @include h3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgba(0, 0, 0, .87);
+    line-height: 1.2;
+  }
+  &__date{
+    @include txt-xxs;
+    display: block;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, .6);
+  }
+  &__thumb{
+    font-size: 0;
+    &.green{color: var(--clr-green);}
+    &.red{color: var(--clr-error);}
+  }
+  &__more{
+    @include btn-reset;
+    font-size: 0;
+    margin-left: .8rem;
+    color: rgba(0, 0, 0, .6);
+  }
+  &__profile{justify-content: flex-start;}
+  &__main{
+    padding: .8rem 0 0 4rem;
+  }
+  &__txt{
+    @include txt-s;
+    overflow: hidden;
+    color: rgba(0, 0, 0, .6);
+    position: relative;
+    .hide{display: none;}
+    &:after{
+      content: '...';
+    }
+    &.open{
+      .hide{display: inline;}
+      &:after{display: none;}
+      & + .review__toggler .material-icons{transform: rotate(180deg);}
+    }
+  }
+  &__toggler{
+    @include txt-s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--clr-link);
+    .material-icons{
+      font-size: 1.6rem;
+    }
+  }
+}

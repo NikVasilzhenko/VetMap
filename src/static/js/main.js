@@ -112,3 +112,59 @@ function fav($this){
     $this.lastElementChild.innerHTML = 'В избранном';
   }
 }
+
+//openHideComplaintForm
+function openHideComplaintForm(hideId){
+  document.getElementById(hideId).style.display = 'block';
+}
+
+//close complaint
+document.getElementById('js-complaint').addEventListener('submit', function(e){  
+  e.preventDefault();
+  closePopup('js-complaint-popup');
+  openPopup('js-complaint-confirm-popup');
+});
+
+//blocChange
+function blocChange($this){
+  if( $this.classList.contains('on') ){
+    $this.classList.remove('on');
+    $this.classList.add('off');
+    $this.firstElementChild.firstElementChild.textContent = "voice_over_off";
+    $this.lastElementChild.textContent = "Разблокировать";
+    openPopup('js-block-on-popup');
+  } else{
+    $this.classList.remove('off');
+    $this.classList.add('on');
+    $this.firstElementChild.firstElementChild.textContent = "record_voice_over";
+    $this.lastElementChild.textContent = "Заблокировать";
+    openPopup('js-block-off-popup');
+  }
+}
+
+//review open/close
+function reviewToggle($this){
+  if($this.previousElementSibling.classList.contains('open')){
+    $this.previousElementSibling.classList.remove('open');
+    $this.firstElementChild.innerHTML = 'Читать весь';
+  } else{
+    $this.previousElementSibling.classList.add('open');
+    $this.firstElementChild.innerHTML = 'Свернуть';
+  }
+}
+
+//rait
+function rait($this){
+  let allStars = $this.parentElement.parentElement.querySelectorAll('input');
+  let numb = $this.value;
+  
+  for(i = 0; i < allStars.length; i++){
+    //console.log(allStars[i].nextElementSibling);
+    allStars[i].nextElementSibling.innerHTML = 'star_border';
+    allStars[i].nextElementSibling.classList.remove('active');
+  }
+  for(j = 0; j < numb; j++){
+    allStars[j].nextElementSibling.innerHTML = 'star';
+    allStars[j].nextElementSibling.classList.add('active');
+  }
+}
