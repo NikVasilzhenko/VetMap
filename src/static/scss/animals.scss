@@ -1,0 +1,39 @@
+.animals{
+  margin: 1rem 0 1.6rem;
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #DCDCDC;
+    padding: .6rem 0 .6rem .8rem;
+    &-main{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;      
+    }
+    &-icn{
+      display: block;
+      width: 2.4rem;
+      margin-right: 1rem;
+    }
+    &-name{
+      @include txt-s;
+      color: rgba(0, 0, 0, .6);
+    }    
+  }
+  &__check{
+    font-size: 0;
+    width: 2.4rem;
+    opacity: 0;
+    .material-icons{
+      font-size: 2.4rem;
+      color: var(--clr-green);
+    }
+  }
+  input{
+    display: none;
+    &:checked + .animals__item-main .animals__item-name{color: var(--clr-green);}
+    &:checked ~ .animals__check{opacity: 1;}
+  }
+}

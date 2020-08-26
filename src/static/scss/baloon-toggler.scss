@@ -1,0 +1,44 @@
+.baloon-toggler{
+  background: #fff;
+  border: 1px solid #DCDCDC;
+  border-radius: 2.4rem;
+  height: 4.8rem;
+  padding: .4rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  position: relative;
+  &__baloon{
+    width: calc(50% - .6rem);
+    height: 4rem;
+    border-radius: 2rem;
+    background-color: var(--clr-blue);
+    position: absolute;
+    top: .3rem;
+    left: .4rem;
+    transition: left .25s;
+  }
+  &__item{
+    @include h4;
+    text-align: center;
+    width: calc(50% - .2rem);
+    padding: 0 1rem;
+    line-height: 1;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(0, 0, 0, .6);
+    position: relative;
+    z-index: 2;
+    &.active{
+      color: #fff;
+    }
+    &:nth-child(2){
+      &.active ~ .baloon-toggler__baloon{
+        left: calc(50% + .2rem);
+      }
+    }
+  }
+}
