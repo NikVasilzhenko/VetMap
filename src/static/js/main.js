@@ -4,8 +4,11 @@ function openPopup(popup){
 }
 
 //close popup
-function closePopup(popup){
-  document.getElementById(popup).style.display = 'none';
+function closePopup(popup){  
+  let thisPopup = document.getElementById(popup);
+  thisPopup.classList.remove('open');  
+  thisPopup.classList.add('close'); 
+  setTimeout( (function(){thisPopup.style.display = 'none';}), 250);
 }
 
 //focus in next code cell
@@ -97,6 +100,14 @@ function popupOverlayClose($this){
 //popupBtnClose
 function popupBtnClose($this){
   let popup = $this.parentElement.parentElement.parentElement;
+  popup.classList.remove('open');  
+  popup.classList.add('close'); 
+  setTimeout( (function(){popup.style.display = 'none';}), 250);
+}
+
+//popupBtnBack
+function popupBtnBack($this){
+  let popup = $this.parentElement.parentElement.parentElement.parentElement;
   popup.classList.remove('open');  
   popup.classList.add('close'); 
   setTimeout( (function(){popup.style.display = 'none';}), 250);

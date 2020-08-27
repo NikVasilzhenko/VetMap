@@ -102,6 +102,11 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+    &_red{
+      background-color: var(--clr-error);
+      color: #fff;
+      .popup__close{color: #fff;}
+    }
   }
   &__close{
     @include btn-reset;

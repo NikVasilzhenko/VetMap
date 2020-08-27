@@ -1,0 +1,9 @@
+.btn-reset{
+  @include btn-reset;
+  margin: 1.4rem 0;
+  line-height: 4.8rem;
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  color: var(--clr-error);
+}
