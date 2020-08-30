@@ -1,0 +1,223 @@
+<div class="layout">
+  <header class="header">
+    <div class="header__main">
+      <button class="header-btn" title="Назад">
+        <i aria-hidden="true" role="img" class="material-icons">arrow_back</i>
+      </button>
+      <div class="header-icn clr-bg-overexposure">
+        <i aria-hidden="true" role="img" class="material-icons">av_timer</i>
+      </div>
+      <h2 class="header-title">Оформление заявки</h2>
+    </div>
+    <button class="header-btn" title="Назад">
+      <i aria-hidden="true" role="img" class="material-icons">close</i>
+    </button>
+  </header>
+  <main class="content">
+    <form class="form statement">
+      <div class="statement__main">
+        <div class="alert">
+          <button class="alert__close" onclick="alertClose(this);">
+            <i aria-hidden="true" role="img" class="material-icons">close</i>
+          </button>
+          <div class="alert__main">
+            <p>Не удалось определить Ваше местополажение. Возможно нет подключения к сети, или отключено определение местоположения на Вашем устройстве</p>
+            <a href="#" target="_blank">Подробнее...</a>
+          </div>
+        </div>
+        <div class="statement__section">
+          <h2 class="statement__section-title">
+            <span>Выбор вида животного *</span>
+          </h2>
+          <div class="animals">
+            <label class="animals__item">
+              <input type="radio" name="animal">
+              <span class="animals__item-main">
+                <img class="animals__item-icn" src="img/pic/animals/dog.png">
+                <span class="animals__item-name">Собаки</span>
+              </span>
+              <div class="animals__check">
+                <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+              </div>
+            </label>
+            <label class="animals__item">
+              <input type="radio" name="animal">
+              <span class="animals__item-main">
+                <img class="animals__item-icn" src="img/pic/animals/cat.png">
+                <span class="animals__item-name">Кошки</span>
+              </span>
+              <div class="animals__check">
+                <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+              </div>
+            </label>
+          </div>  
+          <div class="input-group">     
+            <input type="text" class="input input-group__input" placeholder="Напишите породу животного">                       
+          </div>  
+        </div>
+        <div class="statement__section">
+          <div class="input-row">
+            <div class="input-row__name">Укажите примерный возраст</div>
+            <div class="number js-number">
+              <button type="button" class="number__btn number__btn_minus js-number-minus">-</button>
+              <input type="number" class="input number__input js-number-input" min="1">
+              <button type="button" class="number__btn number__btn_plus js-number-plus">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="statement__section">
+          <div class="dubcheck">
+            <div class="dubcheck__title">
+              <div class="dubcheck__name">Щенок/котенок</div>
+            </div>
+            <div class="dubcheck__wrap">
+              <div class="dubcheck__item">
+                <label class="check">
+                  <input type="radio" name="a3">
+                  <div class="check__dop">
+                    <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+                  </div>
+                </label>
+                <div class="dubcheck__item-name">Да</div>
+              </div>
+              <div class="dubcheck__item">
+                <label class="check">
+                  <input type="radio" name="a3">
+                  <div class="check__dop">
+                    <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+                  </div>
+                </label>
+                <div class="dubcheck__item-name">Нет</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="statement__section">
+          <div class="input-row">
+            <div class="input-row__name">Укажите примерный вес</div>
+            <input type="text" class="input input-row__input" placeholder="Напишите вес (кг)">
+          </div>
+        </div>        
+        <div class="statement__section">
+          <div class="dubcheck">
+            <div class="dubcheck__title">
+              <div class="dubcheck__name">Нужна социализация</div>
+            </div>
+            <div class="dubcheck__wrap">
+              <div class="dubcheck__item">
+                <label class="check">
+                  <input type="radio" name="a3">
+                  <div class="check__dop">
+                    <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+                  </div>
+                </label>
+                <div class="dubcheck__item-name">Да</div>
+              </div>
+              <div class="dubcheck__item">
+                <label class="check">
+                  <input type="radio" name="a3">
+                  <div class="check__dop">
+                    <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+                  </div>
+                </label>
+                <div class="dubcheck__item-name">Нет</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="statement__section">
+          <div class="dubcheck">
+            <div class="dubcheck__title">
+              <div class="dubcheck__name">Нужна дрессировка</div>
+            </div>
+            <div class="dubcheck__wrap">
+              <div class="dubcheck__item">
+                <label class="check">
+                  <input type="radio" name="a3">
+                  <div class="check__dop">
+                    <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+                  </div>
+                </label>
+                <div class="dubcheck__item-name">Да</div>
+              </div>
+              <div class="dubcheck__item">
+                <label class="check">
+                  <input type="radio" name="a3">
+                  <div class="check__dop">
+                    <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+                  </div>
+                </label>
+                <div class="dubcheck__item-name">Нет</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="statement__section">
+          <div class="dubcheck">
+            <div class="dubcheck__title">
+              <div class="dubcheck__name">Медецинское обслуживани</div>
+            </div>
+            <div class="dubcheck__wrap">
+              <div class="dubcheck__item">
+                <label class="check">
+                  <input type="radio" name="a3">
+                  <div class="check__dop">
+                    <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+                  </div>
+                </label>
+                <div class="dubcheck__item-name">Да</div>
+              </div>
+              <div class="dubcheck__item">
+                <label class="check">
+                  <input type="radio" name="a3">
+                  <div class="check__dop">
+                    <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+                  </div>
+                </label>
+                <div class="dubcheck__item-name">Нет</div>
+              </div>
+            </div>
+          </div>
+        </div>        
+        <div class="statement__section">
+          <div class="statement__section-header">
+            <h2 class="statement__section-title"><span>Пожелания по содержанию, кормлению, прогулкам и прочее</span></h2>           
+          </div>          
+          <div class="input-group">
+            <textarea class="input textarea input-group__input input-group__textarea" placeholder="Опишите своими словами"></textarea>
+          </div>
+        </div>
+        <div class="statement__section">
+          <div class="dubcheck">
+            <div class="dubcheck__title">
+              <div class="dubcheck__name">Забрать животное от&nbsp;Вас?</div>
+            </div>
+            <div class="dubcheck__wrap">
+              <div class="dubcheck__item">
+                <label class="check">
+                  <input type="radio" name="a3">
+                  <div class="check__dop">
+                    <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+                  </div>
+                </label>
+                <div class="dubcheck__item-name">Да</div>
+              </div>
+              <div class="dubcheck__item">
+                <label class="check">
+                  <input type="radio" name="a3">
+                  <div class="check__dop">
+                    <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+                  </div>
+                </label>
+                <div class="dubcheck__item-name">Нет</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="statement__footer">
+        <button class="btn-main" type="submit">Оформить</button>
+      </div>
+    </form>    
+  </main>
+</div>

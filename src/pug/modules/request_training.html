@@ -1,0 +1,137 @@
+<div class="layout">
+  <header class="header">
+    <div class="header__main">
+      <button class="header-btn" title="Назад">
+        <i aria-hidden="true" role="img" class="material-icons">arrow_back</i>
+      </button>
+      <div class="header-icn clr-bg-petsupplies">
+        <i aria-hidden="true" role="img" class="material-icons">school</i>
+      </div>
+      <h2 class="header-title">Оформление заявки</h2>
+    </div>
+    <button class="header-btn" title="Назад">
+      <i aria-hidden="true" role="img" class="material-icons">close</i>
+    </button>
+  </header>
+  <main class="content">
+    <form class="form statement">
+      <div class="statement__main">
+        <div class="alert">
+          <button class="alert__close" onclick="alertClose(this);">
+            <i aria-hidden="true" role="img" class="material-icons">close</i>
+          </button>
+          <div class="alert__main">
+            <p>Не удалось определить Ваше местополажение. Возможно нет подключения к сети, или отключено определение местоположения на Вашем устройстве</p>
+            <a href="#" target="_blank">Подробнее...</a>
+          </div>
+        </div>
+        <div class="statement__section">
+          <h2 class="statement__section-title">
+            <span>Выбор вида животного *</span>
+          </h2>
+          <div class="animals">
+            <label class="animals__item">
+              <input type="radio" name="animal" checked disabled>
+              <span class="animals__item-main">
+                <img class="animals__item-icn" src="img/pic/animals/dog.png">
+                <span class="animals__item-name">Собаки</span>
+              </span>
+              <div class="animals__check">
+                <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+              </div>
+            </label>
+          </div>  
+          <div class="input-group">     
+            <input type="text" class="input input-group__input" placeholder="Напишите породу собаки">                       
+          </div>  
+        </div>
+        <div class="statement__section">
+          <div class="input-row">
+            <div class="input-row__name">Укажите примерный возраст</div>
+            <div class="number js-number">
+              <button type="button" class="number__btn number__btn_minus js-number-minus">-</button>
+              <input type="number" class="input number__input js-number-input" min="1">
+              <button type="button" class="number__btn number__btn_plus js-number-plus">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="statement__section">
+          <div class="input-row">
+            <div class="input-row__name">Укажите примерный вес</div>
+            <input type="text" class="input input-row__input" placeholder="Напишите вес (кг)">
+          </div>
+        </div>
+        <div class="statement__section">
+          <div class="statement__section-header">
+            <h2 class="statement__section-title"><span>Укажите разновидности дрессировки</span></h2>
+          </div>          
+          <div class="singlcheck">
+            <div class="singlcheck__title">Обучение командам</div>
+            <label class="check">
+              <input type="checkbox">
+              <div class="check__dop">
+                <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+              </div>
+            </label>
+          </div>
+          <div class="singlcheck">
+            <div class="singlcheck__title">Общие курсы дрессировки</div>
+            <label class="check">
+              <input type="checkbox">
+              <div class="check__dop">
+                <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+              </div>
+            </label>
+          </div>
+          <div class="singlcheck">
+            <div class="singlcheck__title">"Управляемая городская собака"</div>
+            <label class="check">
+              <input type="checkbox">
+              <div class="check__dop">
+                <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+              </div>
+            </label>
+          </div>
+          <div class="singlcheck">
+            <div class="singlcheck__title">Курсы защитно-караульной службы</div>
+            <label class="check">
+              <input type="checkbox">
+              <div class="check__dop">
+                <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+              </div>
+            </label>
+          </div>
+          <div class="singlcheck">
+            <div class="singlcheck__title">Курсы выставочной подготовки</div>
+            <label class="check">
+              <input type="checkbox">
+              <div class="check__dop">
+                <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+              </div>
+            </label>
+          </div>
+          <div class="singlcheck">
+            <div class="singlcheck__title">Консультации кинологов и&nbsp;зоопсихологов</div>
+            <label class="check">
+              <input type="checkbox">
+              <div class="check__dop">
+                <i aria-hidden="true" role="img" class="material-icons">checkbox</i>
+              </div>
+            </label>
+          </div>
+        </div>       
+        <div class="statement__section">
+          <div class="statement__section-header">
+            <h2 class="statement__section-title"><span>Укажите желаемый график занятий</span></h2>           
+          </div>          
+          <div class="input-group">
+            <textarea class="input textarea input-group__input input-group__textarea" placeholder="Опишите своими словами"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="statement__footer">
+        <button class="btn-main" type="submit">Оформить</button>
+      </div>
+    </form>    
+  </main>
+</div>

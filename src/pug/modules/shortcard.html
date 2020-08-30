@@ -332,7 +332,7 @@
         </button>
       </div>
       <div class="popup__main">        
-        <form action="#" class="complaint" id="js-complaint">
+        <form action="#" class="complaint" id="js-complaint" onsubmit="closePopup('js-complaint-popup');openPopup('js-complaint-confirm-popup');return false;">
           <label class="complaint__item">
             <input type="radio" name="complaint">
             <span class="complaint__item-txt">Неверный адрес</span>

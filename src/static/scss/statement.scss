@@ -51,6 +51,8 @@
       color: rgba(0, 0, 0, .87);
       padding-left: 3.2rem;
     }
+    & > *:first-child{margin-top: 0 !important;}
+    & > *:last-child{margin-bottom: 0 !important;}
   }
   &__hr{
     display: block;

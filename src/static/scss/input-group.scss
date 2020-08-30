@@ -2,6 +2,11 @@
   position: relative;
   margin-bottom: 1.6rem;
   &:last-child{margin-bottom: 0;}
+  &__row{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
   &__icn{
     position: absolute;
     top: 1.2rem;
@@ -46,6 +51,12 @@
       &:placeholder{color: var(--clr-error);}
       & ~ .input-group__icn{color: var(--clr-error);}  
     }
+    &_date{
+      width: 10rem;
+      min-width: 10rem;
+      margin-left: 1.6rem;
+      text-align: center;
+    }
   }
   &__textarea{
     padding: 1.6rem;
@@ -76,6 +87,11 @@
       @include btn-reset;
       @include txt-l;
       color: var(--clr-blue);
+    }
+    .material-icons{
+      font-size: 1.6rem;
+      display: inline-block;
+      vertical-align: middle;
     }
   }
 }

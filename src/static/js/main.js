@@ -129,13 +129,6 @@ function openHideComplaintForm(hideId){
   document.getElementById(hideId).style.display = 'block';
 }
 
-//close complaint
-document.getElementById('js-complaint').addEventListener('submit', function(e){  
-  e.preventDefault();
-  closePopup('js-complaint-popup');
-  openPopup('js-complaint-confirm-popup');
-});
-
 //blocChange
 function blocChange($this){
   if( $this.classList.contains('on') ){
@@ -179,3 +172,24 @@ function rait($this){
     allStars[j].nextElementSibling.classList.add('active');
   }
 }
+
+//input type number
+function catalogItemCounter(field){
+  let allItems = document.querySelectorAll(field);
+  for(i = 0; i < allItems.length; i++){
+    let inputNum = allItems[i].querySelector('.js-number-input'),
+        inputMin = inputNum.getAttribute('min');
+    allItems[i].querySelector('.js-number-minus').addEventListener('click', function(){
+      if(inputNum.value <= inputMin){
+        inputNum.value = inputMin;
+      } else{
+        inputNum.value = Number(inputNum.value) - 1;
+      }
+    });
+    allItems[i].querySelector('.js-number-plus').addEventListener('click', function(){
+      inputNum.value = Number(inputNum.value) + 1;
+    });
+  }
+}
+    
+catalogItemCounter('.js-number');

@@ -73,6 +73,7 @@ gulp.task('vendors', function(){
     'node_modules/intl-tel-input/build/js/intlTelInput.js',
     'node_modules/intl-tel-input/build/js/utils.js',
     'node_modules/lightgallery.js/dist/js/lightgallery.js',
+    'src/static/js/datepicker.js',
   ])
     .pipe(concat('vendors.min.js'))
     .pipe(gulp.dest('build/js/'))

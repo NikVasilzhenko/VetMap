@@ -27,3 +27,5 @@ if(input){
 }
 
 lightGallery(document.getElementById('js-lightgallery'))
+
+let datepicker = new Datepicker('.js-date');

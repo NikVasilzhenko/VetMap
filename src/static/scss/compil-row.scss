@@ -1,0 +1,45 @@
+.compil-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #DCDCDC;
+  margin-bottom: .8rem;
+  padding-bottom: .8rem;
+  &:last-of-type{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  &__name{
+    @include txt-s;
+    color: rgba(0, 0, 0, .87);
+  }
+  &__main{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__val{
+    @include txt-s;
+    color: rgba(0, 0, 0, .6);
+    margin-right: .4rem;
+    &.left-align{text-align: left;}
+  }
+  &__icn{
+    width: 1.6rem;
+    height: 1.6rem;
+    svg{
+      display: block;
+      width: 100%;
+      height: 100%;
+      stroke: rgba(0, 0, 0, .6);
+    }
+  }
+  &__edit{
+    @include btn-reset;
+    font-size: 0;
+    color: var(--clr-blue);
+    margin-left: .4rem;
+    .material-icons{font-size: 1.8rem;}
+  }
+}
