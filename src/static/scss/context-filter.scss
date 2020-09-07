@@ -1,0 +1,32 @@
+.context-filter{
+  border-bottom: 1px solid rgba(220, 220, 220, .5);
+  padding: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__counter{
+    @include txt-s;
+    color: rgba(0, 0, 0, .6);
+    span{color: rgba(0, 0, 0, .87)}
+  }
+  &__txt{
+    @include txt-xs;
+    color: rgba(0, 0, 0, .6);
+  }
+  &__bar{
+    display: flex;
+    align-items: center;
+    &_right{justify-content: flex-end;}
+  }
+  &__btn{
+    @include btn-reset;
+    margin-left: 1.2rem;
+    font-size: 0;
+    color: rgba(0,0,0,.6);
+    .material-icons{font-size: 2.4rem;}
+    &_green.active,
+    &.active{color: var(--clr-green);}
+    &_red.active{color: var(--clr-error);}
+    &_yellow.active{color: var(--clr-rait);}
+  }
+}
