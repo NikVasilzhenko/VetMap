@@ -162,3 +162,9 @@ img{
 .textarea:focus:required:invalid{color: var(--clr-input);}
 .input:required:valid,
 .textarea:required:valid{color: var(--clr-input);}
+
+.hr {
+    margin: 1.6rem 0;
+    height: 1px;
+    background-color: #dcdcdc;
+}

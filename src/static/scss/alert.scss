@@ -5,7 +5,7 @@
   color: var(--clr-white);
   @include txt-xs;
   line-height: 2rem;
-  padding: 2.4rem 1.6rem 1.6rem;
+  padding: 1.6rem;
   border-radius: .4rem;
   a{
     color: var(--clr-white);
@@ -15,6 +15,10 @@
     margin: 1em 0;
     &:first-of-type{margin-top: 0;}
     &:last-of-type{margin-bottom: 0;}
+  }
+  h2{
+    @include h4;
+    margin-bottom: .4rem;
   }
   &_fix{
     position: absolute;

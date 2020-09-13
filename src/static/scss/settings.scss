@@ -1,0 +1,14 @@
+.settings{
+  padding: 1.6rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #fff;
+  &__main{
+    width: 100%;
+    flex-grow: 1;    
+  }
+  .btn-main{margin-bottom: 0;}
+}

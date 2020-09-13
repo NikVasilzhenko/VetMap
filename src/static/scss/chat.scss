@@ -1,0 +1,61 @@
+.chat{  
+  &__row{
+    padding-bottom: 2.2rem;
+    position: relative;
+    &_message{
+      padding-left: 4rem;
+      .chat__icn{left: 0;}
+      .chat__cloud{
+        background: #fff;
+        border: 1px solid #DCDCDC;
+        border-radius: .6rem .6rem .6rem 0;
+        &::before{
+          background-color: #fff;
+          border-left: 1px solid #DCDCDC;
+          border-bottom: 1px solid #DCDCDC;
+          width: 1.2rem;
+          height: 1.2rem;
+          left: -.6rem;
+          transform: skewX(-35deg);
+        }
+      }
+    }
+    &_ansver{
+      padding-right: 4rem;
+      .chat__icn{right: 0;}
+      .chat__cloud{
+        background: #DCDCDC;
+        border: 1px solid #DCDCDC;
+        border-radius: .6rem 0 .6rem .6rem;
+        &::before{
+          background-color: #DCDCDC;
+          width: 1.2rem;
+          height: 1.2rem;
+          right: -.6rem;
+          transform: skewX(35deg);
+        }
+      }
+    }
+  }  
+  &__icn{
+    display: block;
+    font-size: 0;
+    position: absolute;
+    bottom: 1.2rem;
+    height: 2.4rem;
+    color: rgba(0, 0, 0, .6);
+  }
+  &__cloud{
+    padding: 1.6rem 1.2rem;
+    position: relative;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: rgba(0, 0, 0, .87);
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -1px;
+    }
+  }
+}

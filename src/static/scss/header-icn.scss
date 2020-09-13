@@ -2,4 +2,12 @@
   width: 3.8rem;
   height: 3.8rem;
   margin-right: 1rem;
+  img{
+    width: 100%;
+    margin: 0 auto;
+  }
+  &_animal + .header-title{
+    width: calc(100% - 8rem);
+    margin-right: 0;
+  }
 }

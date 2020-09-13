@@ -1,0 +1,216 @@
+<div class="layout">
+  <header class="header">
+    <div class="header__main">
+      <button class="header-btn" title="Назад">
+        <i aria-hidden="true" role="img" class="material-icons">arrow_back</i>
+      </button>
+      
+      <h2 class="header-title">Помощь</h2>
+    </div>
+    
+    <button class="header-btn" title="Назад">
+      <i aria-hidden="true" role="img" class="material-icons">close</i>
+    </button>
+  </header>
+  
+  <main class="content content_middle">    
+    <div class="faq">
+      <nav class="faq-nav">
+        <button class="btn faq-nav__item">FAQ</button>
+        <button class="btn faq-nav__item active">Техподдержка</button>
+        <button class="btn faq-nav__item">Конфиденциальность</button>
+      </nav>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h2 class="faq-item__title" onclick="accordion(this);">
+            <i aria-hidden="true" role="img" class="material-icons faq-item__icn">live_help</i>
+            <div class="faq-item__main">
+              <div class="faq-item__header">Тема обращения в техподдержку VetMap</div>
+              <div class="faq-item__row">
+                <div class="faq-item__status">На рассмотрении</div>
+                <time class="faq-item__time">12.01.2020 11:34</time>
+              </div>
+            </div>
+            <i aria-hidden="true" role="img" class="material-icons faq-item__arrow">arrow_downward</i>
+          </h2>
+          <div class="faq-item__txt">
+            <div class="faq-item__chat">
+              <div class="chat">
+                <div class="chat__row chat__row_message">
+                  <div class="chat__cloud">
+                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the of pleasure of the moment</p>
+                  </div>
+                  <div class="chat__icn">
+                    <i aria-hidden="true" role="img" class="material-icons">account_circle</i>
+                  </div>
+                </div>                
+              </div>
+              <button class="btn-add btn-add_center" onclick="openPopup('js-support-ansver')">
+                <i aria-hidden="true" role="img" class="material-icons">add</i>
+                Написать сообщение
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h2 class="faq-item__title active" onclick="accordion(this);">
+            <i aria-hidden="true" role="img" class="material-icons faq-item__icn">announcement</i>
+            <div class="faq-item__main">
+              <div class="faq-item__header">Тема обращения в техподдержку VetMap</div>
+              <div class="faq-item__row">
+                <div class="faq-item__status">Ответ</div>
+                <time class="faq-item__time">12.01.2020 11:34</time>
+              </div>
+            </div>
+            <i aria-hidden="true" role="img" class="material-icons faq-item__arrow">arrow_downward</i>
+          </h2>
+          <div class="faq-item__txt">
+            <div class="faq-item__chat">
+              <div class="chat">
+                <div class="chat__row chat__row_message">
+                  <div class="chat__cloud">
+                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the of pleasure of the moment</p>
+                  </div>
+                  <div class="chat__icn">
+                    <i aria-hidden="true" role="img" class="material-icons">account_circle</i>
+                  </div>
+                </div>
+                <div class="chat__row chat__row_ansver">
+                 <div class="chat__cloud">
+                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the of pleasure of the moment</p>
+                  </div>
+                  <div class="chat__icn">
+                    <i aria-hidden="true" role="img" class="material-icons">support_agent</i>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-add btn-add_center" onclick="openPopup('js-support-ansver')">
+                <i aria-hidden="true" role="img" class="material-icons">add</i>
+                Написать ответ
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h2 class="faq-item__title disactive" onclick="accordion(this);">
+            <i aria-hidden="true" role="img" class="material-icons faq-item__icn">announcement</i>
+            <div class="faq-item__main">
+              <div class="faq-item__header">Тема обращения в техподдержку VetMap</div>
+              <div class="faq-item__row">
+                <div class="faq-item__status">Закрыто</div>
+                <time class="faq-item__time">12.01.2020 11:34</time>
+              </div>
+            </div>
+            <i aria-hidden="true" role="img" class="material-icons faq-item__arrow">arrow_downward</i>
+          </h2>
+          <div class="faq-item__txt">
+            <div class="faq-item__chat">
+              <div class="chat">
+                <div class="chat__row chat__row_message">
+                  <div class="chat__cloud">
+                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the of pleasure of the moment</p>
+                  </div>
+                  <div class="chat__icn">
+                    <i aria-hidden="true" role="img" class="material-icons">account_circle</i>
+                  </div>
+                </div>
+                <div class="chat__row chat__row_ansver">
+                 <div class="chat__cloud">
+                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the of pleasure of the moment</p>
+                  </div>
+                  <div class="chat__icn">
+                    <i aria-hidden="true" role="img" class="material-icons">support_agent</i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <button class="btn-add" onclick="openPopup('js-support-add')">
+          <i aria-hidden="true" role="img" class="material-icons">add</i>
+          Написать в техподдержку
+        </button>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer footer_border">
+    <nav class="footer-nav">
+      <ul>
+        <li>
+          <a href="#" class="footer-nav__item">
+            <div class="footer-nav__item-icn"><i aria-hidden="true" role="img" class="material-icons">place</i></div>
+            <div class="footer-nav__item-txt">Карта</div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer-nav__item">
+            <div class="footer-nav__item-icn">
+              <i aria-hidden="true" role="img" class="material-icons">mail_outline</i>
+              <div class="counter-baloon">2</div>
+            </div>
+            <div class="footer-nav__item-txt">Сообщения</div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer-nav__item">
+            <div class="footer-nav__item-icn"><i aria-hidden="true" role="img" class="material-icons">list_alt</i></div>
+            <div class="footer-nav__item-txt">Заявки</div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer-nav__item">
+            <div class="footer-nav__item-icn"><i aria-hidden="true" role="img" class="material-icons">settings</i></div>
+            <div class="footer-nav__item-txt">Настройки</div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</div>
+
+
+<div class="popup" id="js-support-add">
+    <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
+    <div class="popup__container">
+      <div class="popup__header">
+        <div class="popup__header-main">
+          <h2 class="popup__header-title">Написать в техподдержку</h2>
+        </div>
+        <button class="popup__close" title="Закрыть" onclick="popupBtnClose(this);">
+          <i aria-hidden="true" role="img" class="material-icons">close</i>
+        </button>
+      </div>
+      <div class="popup__main">
+        <form action="#" method="post" class="support-add">
+          <div class="input-group">     
+            <input type="text" class="input input-group__input" placeholder="Тема обращения">                       
+          </div>
+          <textarea class="textarea" name="text" placeholder="Опишите проблему"></textarea>
+          <button class="btn-main" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+</div>
+<div class="popup" id="js-support-ansver">
+    <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
+    <div class="popup__container">
+      <div class="popup__header">
+        <div class="popup__header-main">
+          <h2 class="popup__header-title">Написать ответ</h2>
+        </div>
+        <button class="popup__close" title="Закрыть" onclick="popupBtnClose(this);">
+          <i aria-hidden="true" role="img" class="material-icons">close</i>
+        </button>
+      </div>
+      <div class="popup__main">
+        <form action="#" method="post" class="support-add">
+          <textarea class="textarea" name="text" placeholder="Текст ответа"></textarea>
+          <button class="btn-main" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+</div>
+
+

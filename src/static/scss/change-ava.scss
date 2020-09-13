@@ -1,0 +1,59 @@
+.change-ava{
+  margin: 1.6rem 0;
+  &__title{
+    @include txt-l;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 1.6rem;
+    small{
+      @include txt-xs;
+      display: block;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__btn{
+    @include btn-reset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    color: #fff;
+    .material-icons{font-size: 1.4rem;}
+    &_add{background-color: var(--clr-green);}
+    &_remove{background-color: var(--clr-error);}
+  }
+  &__avatar{
+    width: 6.4rem;
+    height: 6.4rem;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    position: relative;
+    margin: 0 1.6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .material-icons{
+      display: block;
+      font-size: 5.8rem;
+      color: rgba(0,0,0,.6);
+    }
+    img{
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+  }
+}

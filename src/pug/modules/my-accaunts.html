@@ -1,0 +1,228 @@
+<div class="layout">
+  <header class="header">
+    <div class="header__main">
+      <button class="header-btn" title="Назад">
+        <i aria-hidden="true" role="img" class="material-icons">arrow_back</i>
+      </button>
+      
+      <h2 class="header-title">Мои акаунты</h2>
+    </div>
+    
+    <button class="header-btn" title="Назад">
+      <i aria-hidden="true" role="img" class="material-icons">close</i>
+    </button>
+  </header>
+  
+  <main class="content content_middle">    
+    <div class="items-list">
+      <div class="item-row">
+        <a href="javascript:void(0);" class="item-row__main">
+          <div class="item-row__big-avatar">
+            <img src="https://st2.depositphotos.com/2703645/12072/v/950/depositphotos_120725294-stock-illustration-woman-avatar-character.jpg" alt="">
+          </div>
+          <div class="item-row__content">
+            <div class="item-row__title">Маша Иванова</div>
+            <div class="item-row__txt">+7 (988) 888 88 88</div>
+          </div>
+        </a>
+        <div class="item-row__check">
+          <i aria-hidden="true" role="img" class="material-icons">done</i>          
+        </div>
+      </div>
+      <div class="item-row">
+        <a href="javascript:void(0);" class="item-row__main">
+          <div class="item-row__big-avatar clr-bg-vet">
+            <i aria-hidden="true" role="img" class="material-icons">medical_services</i>
+            <div class="icon-baloon icon-baloon_bot-r icon-baloon_verify">
+              <i aria-hidden="true" role="img" class="material-icons">done</i>
+            </div>
+          </div>
+          <div class="item-row__content">
+            <div class="item-row__title">“Мокрый нос”</div>
+            <div class="item-row__txt">Ветклиника</div>
+          </div>
+        </a>
+      </div>
+      <div class="item-row">
+        <a href="javascript:void(0);" class="item-row__main">
+          <div class="item-row__big-avatar clr-bg-vet">
+            <i aria-hidden="true" role="img" class="material-icons">medical_services</i>
+          </div>
+          <div class="item-row__content">
+            <div class="item-row__title">“Мокрый нос”</div>
+            <div class="item-row__txt">Не верифецирован</div>
+          </div>
+        </a>
+      </div>
+      <div class="item-row">
+        <a href="javascript:void(0);" class="item-row__main">
+          <div class="item-row__big-avatar clr-bg-vet">
+            <i aria-hidden="true" role="img" class="material-icons">medical_services</i>
+            <div class="icon-baloon icon-baloon_bot-r icon-baloon_blue">
+              <i aria-hidden="true" role="img" class="material-icons">access_time</i>
+            </div>
+          </div>
+          <div class="item-row__content">
+            <div class="item-row__title">“Мокрый нос”</div>
+            <div class="item-row__txt item-row__txt_blue">В процессе верификации( до 3 дней)</div>
+          </div>
+        </a>
+      </div>
+      <div class="item-row">
+        <a href="javascript:void(0);" class="item-row__main">
+          <div class="item-row__big-avatar clr-bg-vet">
+            <i aria-hidden="true" role="img" class="material-icons">medical_services</i>
+            <div class="icon-baloon icon-baloon_bot-r icon-baloon_error">
+              <i aria-hidden="true" role="img" class="material-icons">error_outline</i>
+            </div>
+          </div>
+          <div class="item-row__content">
+            <div class="item-row__title">“Мокрый нос”</div>
+            <div class="item-row__txt item-row__txt_error">В верификации отказано</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="alert">
+      <button class="alert__close" onclick="alertClose(this);">
+        <i aria-hidden="true" role="img" class="material-icons">close</i>
+      </button>
+      <div class="alert__main">
+        <h2>Причина отказа в верификации</h2>
+        <p>Тут описана какая-нибудь причина, по которой было отказано и бла-бла-бла...</p>
+        <a href="#" target="_blank">Редактировать профиль</a><br>
+        <a href="#" target="_blank">Обратиться в техподдержку</a>
+      </div>
+    </div>
+    <div class="items-bar">
+      <button class="item-btn item-btn_blue" onclick="openPopup('js-del-verify-order-popup')">
+        <span class="item-btn__icn">
+          <i aria-hidden="true" role="img" class="material-icons">verified</i>
+        </span>
+        <span class="item-btn__txt">Верифицировать профессиональный профиль</span>
+      </button>
+      <button class="item-btn item-btn_red" onclick="openPopup('js-del-profile-confirm-popup')">
+        <span class="item-btn__icn">
+          <i aria-hidden="true" role="img" class="material-icons">delete_forever</i>
+        </span>
+        <span class="item-btn__txt">Удалить профессиональный профиль</span>
+      </button>
+    </div>
+    <ul class="links-group">
+      <li class="links-group__item">
+        <a href="javascript:void(0);" class="link" onclick="openPopup('js-verify-help-popup')">Что такое верификация?</a>
+      </li>
+      <li class="links-group__item">
+        <a href="javascript:void(0);" class="link" onclick="openPopup('js-profy-help-popup')">Что такое профессиональный профиль?</a>
+      </li>
+    </ul>
+  </main>
+  
+  <footer class="footer footer_border">
+    <nav class="footer-nav">
+      <ul>
+        <li>
+          <a href="#" class="footer-nav__item">
+            <div class="footer-nav__item-icn"><i aria-hidden="true" role="img" class="material-icons">place</i></div>
+            <div class="footer-nav__item-txt">Карта</div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer-nav__item">
+            <div class="footer-nav__item-icn">
+              <i aria-hidden="true" role="img" class="material-icons">mail_outline</i>
+              <div class="counter-baloon">2</div>
+            </div>
+            <div class="footer-nav__item-txt">Сообщения</div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer-nav__item">
+            <div class="footer-nav__item-icn"><i aria-hidden="true" role="img" class="material-icons">list_alt</i></div>
+            <div class="footer-nav__item-txt">Заявки</div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer-nav__item">
+            <div class="footer-nav__item-icn"><i aria-hidden="true" role="img" class="material-icons">settings</i></div>
+            <div class="footer-nav__item-txt">Настройки</div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</div>
+
+
+<div class="popup" id="js-verify-help-popup">
+  <div class="popup__overlay popup__overlay_cross" onclick="closePopup('js-verify-help-popup')"></div>
+  <div class="popup__fixcontainer">
+   
+    <article class="politic">
+      <h2>Что такое верификация?</h2>
+      <h3>1. Общие положения</h3>
+      <p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые Михайловым Иваном Сергеевичем (далее – Оператор).</p>
+      <ul>
+        <li>1.1. Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.</li>
+        <li>1.2. Настоящая политика Оператора в отношении обработки персональных данных (далее – Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта</li>
+      </ul>
+    </article>
+    
+  </div>
+</div>
+<div class="popup" id="js-profy-help-popup">
+  <div class="popup__overlay popup__overlay_cross" onclick="closePopup('js-profy-help-popup')"></div>
+  <div class="popup__fixcontainer">
+   
+    <article class="politic">
+      <h2>Что такое профессиональный акаунт и “с чем его едят”</h2>
+      <h3>1. Общие положения</h3>
+      <p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые Михайловым Иваном Сергеевичем (далее – Оператор).</p>
+      <ul>
+        <li>1.1. Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.</li>
+        <li>1.2. Настоящая политика Оператора в отношении обработки персональных данных (далее – Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта</li>
+      </ul>
+    </article>
+    
+  </div>
+</div>
+<div class="popup" id="js-del-verify-order-popup">
+  <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
+  <div class="popup__container">
+    <div class="popup__header">
+      <div class="popup__header-main">
+        <h2 class="popup__header-title">Подать заявку на верификацию</h2>
+      </div>
+      <button class="popup__close" title="Закрыть" onclick="popupBtnClose(this);">
+        <i aria-hidden="true" role="img" class="material-icons">close</i>
+      </button>
+    </div>
+    <div class="popup__main">        
+      <div class="confirm-message">
+        <p class="confirm-message__txt">Верификация может занять N дней. В процессе верификации буде то и это. Во время верификации нельзя вносить изменения в профиль</p>        
+      </div>
+      <button class="btn-reset" onclick="closePopup('js-del-verify-order-popup');">Отмена</button>
+      <button class="btn-main" onclick="closePopup('js-del-verify-order-popup');">Подать</button>
+    </div>
+  </div>
+</div>
+<div class="popup" id="js-del-profile-confirm-popup">
+  <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
+  <div class="popup__container">
+    <div class="popup__header">
+      <div class="popup__header-main">
+        <h2 class="popup__header-title">Удалить профиль</h2>
+      </div>
+      <button class="popup__close" title="Закрыть" onclick="popupBtnClose(this);">
+        <i aria-hidden="true" role="img" class="material-icons">close</i>
+      </button>
+    </div>
+    <div class="popup__main">        
+      <div class="confirm-message">
+        <h2 class="confirm-message__title red">Вы уверены что хотите удалить профиль?</h2>        
+      </div>
+      <button class="btn-reset" onclick="closePopup('js-del-profile-confirm-popup');">Нет, не хочу</button>
+      <button class="btn-main" onclick="closePopup('js-del-profile-confirm-popup');">Да, удалить</button>
+    </div>
+  </div>
+</div>

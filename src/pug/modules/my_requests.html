@@ -1,0 +1,191 @@
+<div class="layout">
+  <header class="header">
+    <div class="header__main">
+      <button class="header-btn" title="Назад">
+        <i aria-hidden="true" role="img" class="material-icons">arrow_back</i>
+      </button>
+      
+      <h2 class="header-title">Мои заявки</h2>
+    </div>
+    
+    <button class="header-btn" title="Назад">
+      <i aria-hidden="true" role="img" class="material-icons">close</i>
+    </button>
+  </header>
+  
+  <main class="content content_middle">
+    <div class="categorys-filter">
+      <div class="swiper-container categorys-filter__slider" id="js-categorys-filter">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide categorys-filter__slide">
+            <div class="categorys-filter__item clr-bg-button">
+              <i aria-hidden="true" role="img" class="material-icons">close</i>
+            </div>
+          </div>
+          <div class="swiper-slide categorys-filter__slide">
+            <div class="categorys-filter__item clr-bg-vet active">
+              <i aria-hidden="true" role="img" class="material-icons">medical_services</i>
+            </div>
+          </div>
+          <div class="swiper-slide categorys-filter__slide">
+            <div class="categorys-filter__item clr-bg-grooming">
+              <i aria-hidden="true" role="img" class="material-icons">content_cut</i>
+            </div>
+          </div>
+          <div class="swiper-slide categorys-filter__slide">
+            <div class="categorys-filter__item clr-bg-overexposure">
+              <i aria-hidden="true" role="img" class="material-icons">av_timer</i>
+            </div>
+          </div>
+          <div class="swiper-slide categorys-filter__slide">
+            <div class="categorys-filter__item clr-bg-paddock">
+              <i aria-hidden="true" role="img" class="material-icons">pets</i>
+            </div>
+          </div>
+          <div class="swiper-slide categorys-filter__slide">
+            <div class="categorys-filter__item clr-bg-dogsitting">
+              <i aria-hidden="true" role="img" class="material-icons">house</i>
+            </div>
+          </div>
+          <div class="swiper-slide categorys-filter__slide">
+            <div class="categorys-filter__item clr-bg-petsupplies">
+              <i aria-hidden="true" role="img" class="material-icons">shopping_cart</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="context-filter">      
+      <div class="context-filter__bar">
+        <a href="javascript:void(0);" class="context-filter__item active">Все(3/8)</a>
+        <a href="javascript:void(0);" class="context-filter__item">Активные(6)</a>
+        <a href="javascript:void(0);" class="context-filter__item">Скрытые(1)</a>
+        <a href="javascript:void(0);" class="context-filter__item">Закрытые(1)</a>
+      </div>
+    </div>
+    <div class="items-list">
+      <div class="item-row">
+        <a href="#" class="item-row__main">
+          <div class="item-row__avatar clr-bg-vet">
+            <i aria-hidden="true" role="img" class="material-icons">medical_services</i>
+          </div>
+          <div class="item-row__content">
+            <div class="item-row__title">На услуги ветеренарии</div>
+            <div class="item-row__txt">От 12.10.2020</div>
+          </div>
+        </a>
+        <button class="item-row__more" onclick="openPopup('js-requests-more')">
+          <i aria-hidden="true" role="img" class="material-icons">more_vert</i>          
+        </button>
+      </div>
+      <div class="item-row">
+        <a href="#" class="item-row__main">
+          <div class="item-row__avatar clr-bg-vet item-row__avatar_grey">
+            <i aria-hidden="true" role="img" class="material-icons">medical_services</i>
+            <div class="icon-baloon icon-baloon_top-r icon-baloon_lock">
+              <i aria-hidden="true" role="img" class="material-icons">lock</i>
+            </div>
+          </div>
+          <div class="item-row__content">
+            <div class="item-row__title item-row__title_grey">На услуги ветеренарии</div>
+            <div class="item-row__txt">Скрыта 12.09.2020</div>
+          </div>
+        </a>
+        <button class="item-row__more" onclick="openPopup('js-requests-more')">
+          <i aria-hidden="true" role="img" class="material-icons">more_vert</i>          
+        </button>
+      </div>
+      <div class="item-row">
+        <a href="#" class="item-row__main">
+          <div class="item-row__avatar clr-bg-vet item-row__avatar_grey">
+            <i aria-hidden="true" role="img" class="material-icons">medical_services</i>
+          </div>
+          <div class="item-row__content">
+            <div class="item-row__title item-row__title_grey">На услуги ветеренарии</div>
+            <div class="item-row__txt">Закрыта 12.09.2020</div>
+          </div>
+        </a>
+        <button class="item-row__more" onclick="openPopup('js-requests-more')">
+          <i aria-hidden="true" role="img" class="material-icons">more_vert</i>          
+        </button>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer footer_border">
+    <nav class="footer-nav">
+      <ul>
+        <li>
+          <a href="#" class="footer-nav__item">
+            <div class="footer-nav__item-icn"><i aria-hidden="true" role="img" class="material-icons">place</i></div>
+            <div class="footer-nav__item-txt">Карта</div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer-nav__item">
+            <div class="footer-nav__item-icn">
+              <i aria-hidden="true" role="img" class="material-icons">mail_outline</i>
+              <div class="counter-baloon">2</div>
+            </div>
+            <div class="footer-nav__item-txt">Сообщения</div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer-nav__item">
+            <div class="footer-nav__item-icn"><i aria-hidden="true" role="img" class="material-icons">list_alt</i></div>
+            <div class="footer-nav__item-txt">Заявки</div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer-nav__item">
+            <div class="footer-nav__item-icn"><i aria-hidden="true" role="img" class="material-icons">settings</i></div>
+            <div class="footer-nav__item-txt">Настройки</div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</div>
+
+
+<div class="popup" id="js-requests-more">
+    <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
+    <div class="popup__container">
+      <div class="popup__header">
+        <div class="popup__header-main">
+          <h2 class="popup__header-title">На услуги ветеренарии</h2>
+        </div>
+        <button class="popup__close" title="Закрыть" onclick="popupBtnClose(this);">
+          <i aria-hidden="true" role="img" class="material-icons">close</i>
+        </button>
+      </div>
+      <div class="popup__main">
+        <ul class="more-menu">
+          <li>
+            <a href="javascript:void(0);" class="more-menu-item">
+              <span class="more-menu-item__icn">
+                <i aria-hidden="true" role="img" class="material-icons">edit</i>
+              </span>
+              <span class="more-menu-item__txt">Редактировать заявку</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="more-menu-item">
+              <span class="more-menu-item__icn">
+                <i aria-hidden="true" role="img" class="material-icons">lock</i>
+              </span>
+              <span class="more-menu-item__txt">Временно скрыть заявку</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="more-menu-item red">
+              <span class="more-menu-item__icn">
+                <i aria-hidden="true" role="img" class="material-icons">record_voice_over</i>
+              </span>
+              <span class="more-menu-item__txt">Удалить заявку</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

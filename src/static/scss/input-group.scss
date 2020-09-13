@@ -15,6 +15,10 @@
     font-size: 0;
     color: rgba(0, 0, 0, .6);
     .material-icons{font-size: 2.4rem;}
+    svg{
+      display: block;
+      fill: rgba(0, 0, 0, .6);
+    }
     .demo-icon{
       font-size: 2.4rem;
       width: 2.4rem;
@@ -80,7 +84,7 @@
     .material-icons{font-size: 2.4rem;}
   }
   &__add{    
-    margin-top: .4rem;
+    margin-top: 1.6rem;
     display: flex;
     justify-content: flex-end;    
     &-btn{

@@ -1,0 +1,39 @@
+.icon-baloon{
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 0;
+  z-index: 2;
+  .material-icons{
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  &_bot-r{
+    bottom: -.2rem;
+    right: -.2rem;
+  }
+  &_top-r{
+    top: -.2rem;
+    right: -.2rem;
+  }
+  &_verify{
+    color: #fff;
+    background-color: var(--clr-green);
+  }
+  &_error{
+    color: #fff;
+    background-color: var(--clr-error);
+  }
+  &_blue{
+    color: #fff;
+    background-color: var(--clr-blue);
+  }
+  &_lock{
+    color: #fff;
+    background-color: var(--clr-error);
+    .material-icons{font-size: 1rem;}
+  }
+}

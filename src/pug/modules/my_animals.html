@@ -5,7 +5,7 @@
         <i aria-hidden="true" role="img" class="material-icons">arrow_back</i>
       </button>
       
-      <h2 class="header-title">Черный список</h2>
+      <h2 class="header-title">Мои животные</h2>
     </div>
     
     <button class="header-btn" title="Назад">
@@ -13,56 +13,38 @@
     </button>
   </header>
   
-  <main class="content content_middle">    
-    <div class="context-filter">
-      <div class="context-filter__counter">
-        Вего: <span>2</span>
-      </div>
-      <div class="context-filter__bar"></div>
-    </div>
+  <main class="content content_middle">  
     <div class="items-list">
       <div class="item-row">
         <a href="#" class="item-row__main">
-          <div class="item-row__avatar">
-            <img src="https://img2.freepng.ru/20181201/eh/kisspng-responsive-web-design-world-wide-web-page-layout-5c021604dc4af7.3799867415436405809023.jpg" alt="">
+          <div class="item-row__animal">
+            <img src="img/pic/animals/dog.png" alt="">
           </div>
           <div class="item-row__content">
-            <div class="item-row__title">ZooMagic</div>
-            <div class="item-row__txt">Зоотовары, лекарства для животных</div>
+            <div class="item-row__title">Шарик. Немецкая овчарка</div>
           </div>
         </a>
-        <button class="item-row__more" onclick="openPopup('js-blacklist-more')">
+        <button class="item-row__more" onclick="openPopup('js-animal-more')">
           <i aria-hidden="true" role="img" class="material-icons">more_vert</i>          
         </button>
       </div>
       <div class="item-row">
         <a href="#" class="item-row__main">
-          <div class="item-row__avatar">
-            <img src="https://img2.freepng.ru/20181201/eh/kisspng-responsive-web-design-world-wide-web-page-layout-5c021604dc4af7.3799867415436405809023.jpg" alt="">
+          <div class="item-row__animal">
+            <img src="img/pic/animals/cat.png" alt="">
           </div>
           <div class="item-row__content">
-            <div class="item-row__title">ZooMagic</div>
-            <div class="item-row__txt">Зоотовары, лекарства для животных</div>
+            <div class="item-row__title">Мурка. Беспородная</div>
           </div>
         </a>
-        <button class="item-row__more" onclick="openPopup('js-blacklist-more')">
+        <button class="item-row__more" onclick="openPopup('js-animal-more')">
           <i aria-hidden="true" role="img" class="material-icons">more_vert</i>          
         </button>
       </div>
-      <div class="item-row">
-        <a href="#" class="item-row__main">
-          <div class="item-row__avatar clr-bg-vet">
-            <i aria-hidden="true" role="img" class="material-icons">medical_services</i>
-          </div>
-          <div class="item-row__content">
-            <div class="item-row__title">ZooMagic</div>
-            <div class="item-row__txt">Зоотовары, лекарства для животных</div>
-          </div>
-        </a>
-        <button class="item-row__more" onclick="openPopup('js-blacklist-more')">
-          <i aria-hidden="true" role="img" class="material-icons">more_vert</i>          
-        </button>
-      </div>
+      <button class="btn-add">
+        <i aria-hidden="true" role="img" class="material-icons">add</i>
+        Добавить новое животное
+      </button>
     </div>
   </main>
   
@@ -102,36 +84,56 @@
 </div>
 
 
-<div class="popup" id="js-blacklist-more">
-    <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
-    <div class="popup__container">
+<div class="popup" id="js-animal-more">
+  <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
+  <div class="popup__container">
       <div class="popup__header">
         <div class="popup__header-main">
-          <h2 class="popup__header-title">Черный список</h2>
+          <h2 class="popup__header-title">Шарик. Немецкая овчарка</h2>
         </div>
-        <button class="popup__close" title="Закрыть" onclick="popupBtnClose(this);">
+        <button class="popup__close" title="Закрыть">
           <i aria-hidden="true" role="img" class="material-icons">close</i>
         </button>
       </div>
       <div class="popup__main">
         <ul class="more-menu">
           <li>
-            <a href="javascript:void(0);" class="more-menu-item red">
+            <a href="javascript:void(0);" class="more-menu-item">
               <span class="more-menu-item__icn">
-                <i aria-hidden="true" role="img" class="material-icons">notification_important</i>
+                <i aria-hidden="true" role="img" class="material-icons">edit</i>
               </span>
-              <span class="more-menu-item__txt">Пожаловаться</span>
+              <span class="more-menu-item__txt">Редактировать карточк животного</span>
             </a>
           </li>
           <li>
-            <a href="javascript:void(0);" class="more-menu-item red">
+            <a href="javascript:void(0);" class="more-menu-item red" onclick="openPopup('js-delete-animal')">
               <span class="more-menu-item__icn">
-                <i aria-hidden="true" role="img" class="material-icons">record_voice_over</i>
+                <i aria-hidden="true" role="img" class="material-icons">close</i>
               </span>
-              <span class="more-menu-item__txt">Заблокировать</span>
+              <span class="more-menu-item__txt">Удалить животное</span>
             </a>
           </li>
         </ul>
       </div>
+  </div>
+</div>
+<div class="popup" id="js-delete-animal">
+  <div class="popup__overlay" onclick="popupOverlayClose(this);"></div>
+  <div class="popup__container">
+    <div class="popup__header">
+      <div class="popup__header-main">
+        <h2 class="popup__header-title">Удалить животное</h2>
+      </div>
+      <button class="popup__close" title="Закрыть" onclick="popupBtnClose(this);">
+        <i aria-hidden="true" role="img" class="material-icons">close</i>
+      </button>
+    </div>
+    <div class="popup__main">        
+      <div class="confirm-message">
+        <h2 class="confirm-message__title red">Вы уверены что хотите удалить карточку с этим животным?</h2>        
+      </div>
+      <button class="btn-reset" onclick="closePopup('js-del-profile-confirm-popup');">Нет, не хочу</button>
+      <button class="btn-main" onclick="closePopup('js-del-profile-confirm-popup');">Да, удалить</button>
     </div>
   </div>
+</div>

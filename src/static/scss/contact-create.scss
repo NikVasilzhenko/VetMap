@@ -1,0 +1,40 @@
+.contact-create{
+  &__error{
+    @include txt-s;
+    text-align: center;
+    color: var(--clr-error);
+  }
+  &__select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.6rem;
+  }
+  &__btn{
+    @include btn-reset;
+    margin: 0 .8rem;
+    width: 3.8rem;
+    height: 3.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0;
+    background: var(--clr-blue);
+    border-radius: .4rem;
+    text-align: center;
+    .material-icons{font-size: 2.4rem;}
+    svg{
+      display: block;
+      fill: #fff;
+      width: 2.4rem;
+      height: 2.4rem;
+      margin: 0 auto;
+    }
+    &.active{
+      background-color: var(--clr-green);
+      transform: translateY(-2px);
+      box-shadow: 0 2px 3px rgba(0, 0, 0, .25);
+    }
+  }
+}

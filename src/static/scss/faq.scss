@@ -1,0 +1,110 @@
+.faq{
+  background-color: #fff;
+  padding: 2.4rem 1.6rem 0;
+  &-nav{
+    border-bottom: 1px solid #DCDCDC;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 1.6rem;
+    width: calc(100% + 3.2rem);
+    margin: 0 0 1.6rem -1.6rem;
+    &__item{
+      @include btn-reset;
+      @include txt-s;
+      position: relative;
+      margin-right: 1.6rem;
+      padding-bottom: 1.4rem;
+      color: rgba(0, 0, 0, .6);
+      min-width: 6.4rem;
+      text-align: center;
+      &.active{
+        color: var(--clr-green);
+        &::after{
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          width: 100%;
+          background: var(--clr-green);
+          height: 3px;
+          border-radius: 3px 3px 0 0;
+        }
+      }
+      &:last-child{margin-right: 0;}
+    }
+  }
+  &-search,
+  .search{
+    width: 100%;
+    right: 0;
+  }
+  &-item{
+    margin: 1.6rem 0;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid rgba(220, 220, 220, .5);
+    &:last-child{
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    &__title{      
+      position: relative;
+      padding: 0 2.4rem 0 4rem;
+      color: rgba(0, 0, 0, .87);
+      &.open{
+        .faq-item__arrow{transform: translateY(-50%) rotate(180deg);}
+      }
+      &.active{
+        .faq-item__icn,
+        .faq-item__status{color: var(--clr-green);}
+        color: var(--clr-green);
+      }
+      &.disactive{opacity: .4;}
+    }
+    &__header{
+      @include txt-m;
+      line-height: 2.1rem;
+    }
+    &__row{
+      @include txt-xs;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: rgba(0,0,0,.6);
+      line-height: 1.6rem;
+    }
+    &__arrow,
+    &__icn{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &__icn{
+      left: 0;
+      font-size: 2.4rem;
+      color: rgba(0,0,0,.6);
+    }
+    &__arrow{
+      right: 0;
+      font-size: 1.6rem;
+      color: rgba(0, 0, 0, .6);
+    }
+    &__txt{
+      display: none;
+      padding: 1.6rem 0 0 4rem;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      color: rgba(0, 0, 0, .87);
+      a{
+        color: #4385FF;
+        text-decoration: underline;
+        &:hover{text-decoration: none;}
+      }
+    }  
+    &__chat{
+      padding-top: 2.2rem;
+      .btn-add{margin: 0;}
+    }
+  }
+}

@@ -29,3 +29,10 @@ if(input){
 lightGallery(document.getElementById('js-lightgallery'))
 
 let datepicker = new Datepicker('.js-date');
+
+//storys
+let categorysFilter = new Swiper('#js-categorys-filter', {
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  freeMode: true,
+});

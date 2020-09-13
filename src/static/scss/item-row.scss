@@ -10,10 +10,18 @@
     align-items: center;
     justify-content: flex-start;
     flex-grow: 1;
+    color: rgba(0, 0, 0, 0.87);
+    &.active{
+      color: var(--clr-green);
+      .item-row__contact-icn{
+        svg{fill: var(--clr-green);}
+      }
+    }
   }
   &__more{
     @include btn-reset;
     color: rgba(0, 0, 0, .6);
+    font-size: 0;
     width: 2.4rem;
     min-width: 2.4rem;
     margin-left: .8rem;
@@ -25,14 +33,46 @@
     height: 3.2rem;
     border-radius: 50%;
     border: 1px solid #DCDCDC;
-    overflow: hidden;
-    margin-right: .6rem;
+    margin-right: 2rem;
+    position: relative;
+    img{border-radius: 50%;}
     .material-icons{font-size: 1.6rem;}
+  }
+  &__contact-icn{
+    font-size: 0;
+    width: 2.4rem;
+    min-width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 1.8rem;
+    .material-icons{font-size: 2.4rem;}
+    svg{
+      display: block;
+      font-size: 0;
+      fill: rgba(0, 0, 0, 0.87);
+    }
+  }
+  &__animal{
+    width: 3.2rem;
+    min-width: 3.2rem;
+    height: 3.2rem;    
+    margin-right: 2rem;
+    position: relative;
+  }
+  &__big-avatar{
+    width: 4.2rem;
+    min-width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+    border: 1px solid #DCDCDC;
+    margin-right: 1rem;
+    position: relative;
+    img{border-radius: 50%;}
+    .material-icons{font-size: 2.4rem;}
   }
   &__icon{
     width: 3.2rem;
     min-width: 3.2rem;
-    margin-right: .6rem;
+    margin-right: 2rem;
     font-size: 0;    
     &_yellow{color: var(--clr-rait);}
     &_green{color: var(--clr-green);}
@@ -55,5 +95,53 @@
   &__txt{
     @include txt-xs;
     color: rgba(0, 0, 0, .6);
+  }
+  &__txt{
+    &_error{color: var(--clr-error);}
+    &_blue{color: var(--clr-blue);}
+  }
+  &__check{
+    width: 2.4rem;
+    min-width: 2.4rem;
+    margin-left: .8rem;
+    font-size: 0;
+    color: var(--clr-green);
+    .material-icons{font-size: 2.4rem;}
+  }
+  &__fav{
+    @include btn-reset;
+    color: rgba(0, 0, 0, .6);
+    font-size: 0;
+    width: 2.4rem;
+    min-width: 2.4rem;
+    margin-left: .8rem;
+    .material-icons{font-size: 2.4rem;}
+    &.active{color: var(--clr-green);}
+  }
+}
+.item-btn{
+  @include btn-reset;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid rgba(220, 220, 220, .5);
+  white-space: normal;
+  text-align: left;
+  line-height: 1.6rem;
+  &:last-child{border-bottom: none;}
+  &_red{color: var(--clr-error);}
+  &_blue{color: var(--clr-blue);}
+  &__icn{
+    font-size: 0;
+    width: 3.2rem;
+    min-width: 3.2rem;
+    margin-right: 1.8rem;
+    font-size: 0;
+    .material-icons{font-size: 3.2rem;}
+  }
+  &__txt{
+    @include h4;
+    flex-grow: 1;
   }
 }

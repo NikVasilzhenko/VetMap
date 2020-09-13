@@ -29,6 +29,7 @@
   "dependencies": {
     "intl-tel-input": "^17.0.3",
     "lightgallery.js": "^1.2.0",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "swiper": "^5.2.1"
   }
 }

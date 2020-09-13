@@ -1,0 +1,46 @@
+.thems-toggler{
+  display: block;
+  width: 100%;
+  margin: 1.6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  &__dop{
+    width: 4rem;
+    height: 2rem;
+    background: #263441;
+    border-radius: 1rem;
+    position: relative;
+    margin-right: 1.6rem;
+    &::before{
+      content: '';
+      display: block;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      position: absolute;
+      top: .2rem;
+      transition: left .25s;
+    }
+  }
+  &__txt{
+    @include txt-s;
+    color: rgba(0, 0, 0, .87);
+  }
+}
+.light .thems-toggler{
+  &__dop{
+    &::before{
+      background-color: #4385FF;
+      left: .2rem;
+    }
+  }
+}
+.dark .thems-toggler{
+  &__dop{
+    &::before{
+      background-color: #fff;
+      left: 2.2rem;
+    }
+  }
+}

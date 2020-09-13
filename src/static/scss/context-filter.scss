@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #fff;
   &__counter{
     @include txt-s;
     color: rgba(0, 0, 0, .6);
@@ -28,5 +29,16 @@
     &.active{color: var(--clr-green);}
     &_red.active{color: var(--clr-error);}
     &_yellow.active{color: var(--clr-rait);}
+  }
+  &__item{
+    @include txt-s;
+    color: rgba(0, 0, 0, .87);
+    margin-right: 1rem;
+    &:last-child{margin-right: 0;}
+    &:hover,
+    &.active{
+      color: var(--clr-green);
+      text-decoration: underline;
+    }
   }
 }

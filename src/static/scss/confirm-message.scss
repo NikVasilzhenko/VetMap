@@ -5,6 +5,7 @@
     @include h1;
     color: rgba(104, 158, 214, .85);
     margin-bottom: 1rem;
+    &.red{color: var(--clr-error);}
   }
   &__txt{
     @include txt-m;

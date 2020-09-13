@@ -1,0 +1,13 @@
+.btn-add{
+  @include btn-reset;
+  @include h4;
+  margin: 1.6rem 0;  
+  color: #4385FF;
+  width: 100%;
+  .material-icons{
+    font-size: 3.2rem;
+    margin-right: 1.2rem;
+    vertical-align: middle;
+  }
+  &_center{text-align: center;}
+}
